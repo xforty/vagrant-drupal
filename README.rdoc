@@ -6,7 +6,7 @@ Template repo for a new drupal project built on top of a vagrant vm.
 
 * Not windows (haven't tested it yet)
 * {VirtualBox}[http://www.virtualbox.org/] >= 4.1
-* Ruby 1.9 (just use rvm to manage your ruby runtime environment)
+* Ruby 1.9 (just use rvm to manage your ruby version)
 * {vagrant}[http://www.vagrantup.com/] gem
 * {librarian}[https://github.com/applicationsonline/librarian] gem
 
@@ -14,6 +14,5 @@ Template repo for a new drupal project built on top of a vagrant vm.
 
 * git clone git://github.com/xforty/vagrant-drupal-project.git
 * cd vagrant-drupal-project
-* Add line to your /etc/hosts
-** 172.21.21.21  local.drupal
+* Add line to your /etc/hosts:  "172.21.21.21  local.drupal"
 * vagrant up
