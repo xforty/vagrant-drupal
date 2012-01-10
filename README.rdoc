@@ -18,6 +18,6 @@ Template repo for a new drupal project built on top of a vagrant vm.
 * librarian-chef install
 * vagrant up
 * vagrant ssh
-* sudo drush make --working-copy /vagrant/distro.make /srv/www
+* sudo drush make /vagrant/distro.make /srv/www
 * sudo drush site-install --db-url=mysql://[user]:[pass]@[host]:[port]/[database] --account-pass=[password] --account-mail=[email]
 * Go to http://local.drupal
