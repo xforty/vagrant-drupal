@@ -12,7 +12,10 @@ Template repo for a new drupal project built on top of a vagrant vm.
 
 = USAGE:
 
+* Add line to your /etc/hosts: "172.21.21.21  local.drupal"
 * git clone git://github.com/xforty/vagrant-drupal-project.git
 * cd vagrant-drupal-project
-* Add line to your /etc/hosts:  "172.21.21.21  local.drupal"
+* librarian-chef install
 * vagrant up
+* sudo drush make --working-copy /vagrant/distro.make /srv/www
+* sudo drush site-install --db-url=mysql://[user]:[pass]@[host]:[port]/[database] --account-pass=[password] --account-mail=[email]
