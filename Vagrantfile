@@ -45,9 +45,6 @@ Vagrant::Config.run do |config|
       :drupal => {
         :project_name => "drupal"
       },
-      :drush => {
-        :version => "5.0.0"
-      },
       :mysql => {
         :server_root_password => "root"
       },
