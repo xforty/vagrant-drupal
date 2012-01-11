@@ -12,6 +12,7 @@ Template repo for a new drupal project built on top of a vagrant vm.
 * {librarian}[https://github.com/applicationsonline/librarian] gem
 
 = BASIC USAGE:
+
 Start on the host by provisioning and ssh'ing into a vm:<br/>
 <code>host$ git clone git://github.com/xforty/vagrant-drupal-project.git</code><br/>
 <code>host$ cd vagrant-drupal-project</code><br/>
