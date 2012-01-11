@@ -19,5 +19,6 @@ Template repo for a new drupal project built on top of a vagrant vm.
 * vagrant up
 * vagrant ssh
 * sudo drush make /vagrant/example.make /srv/www
+* cd /srv/www
 * sudo drush site-install --db-url=mysql://[user]:[pass]@[host]:[port]/[database]
 * Go to http://local.drupal
