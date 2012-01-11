@@ -1,6 +1,3 @@
-# rdoc format
-# http://rdoc.rubyforge.org/RDoc/Markup.html
-
 = DESCRIPTION:
 
 Template repo for a new drupal project built on top of a vagrant vm.
@@ -10,24 +7,23 @@ Template repo for a new drupal project built on top of a vagrant vm.
 * Not windows (haven't tested it yet)
 * {VirtualBox}[http://www.virtualbox.org/] >= 4.1
 * Ruby 1.9 (just use rvm to manage your ruby version)
-* {chef}[http://wiki.opscode.com/display/chef/Installing+Chef+Client+and+Chef+Solo] gem
-* {vagrant}[http://www.vagrantup.com/] gem >= 0.10
+* {chef}[http://wiki.opscode.com/display/chef/Installing+Chef+Client+and+Chef+Solo] gem >= 0.10
+* {vagrant}[http://www.vagrantup.com/] gem
 * {librarian}[https://github.com/applicationsonline/librarian] gem
 
 = USAGE:
 
-On the command line:
+Start on the host by provisioning and ssh'ing into a vm:<br/>
+<code>host$ git clone git://github.com/xforty/vagrant-drupal-project.git</code><br/>
+<code>host$ cd vagrant-drupal-project</code><br/>
+<code>host$ librarian-chef install</code><br/>
+<code>host$ vagrant up</code><br/>
+<code>host$ vagrant ssh</code><br/>
+<br/>
+Then build and install a drupal site on the vm:<br/>
+<code>vm$ sudo drush make --prepare-install /vagrant/example.make /srv/www</code><br/>
+<code>vm$ cd /srv/www</code><br/>
+<code>vm$ sudo drush site-install --db-url=mysql://dbuser:password@localhost/drupal</code><br/>
 
-<code>
-host$ git clone git://github.com/xforty/vagrant-drupal-project.git
-host$ cd vagrant-drupal-project
-host$ librarian-chef install
-host$ vagrant up
-host$ vagrant ssh
-vm$   sudo drush make --prepare-install /vagrant/example.make /srv/www
-vm$   cd /srv/www
-vm$   sudo drush site-install --db-url=mysql://dbuser:password@localhost/drupal
-</code>
-
-Go to {http://localhost:4567}[http://localhost:4567]. Log in to the drupal site with
-<code>admin</code> user and the password specified in the site-install output.
+Go to http://localhost:4567 and log in to the drupal site with the
+credentials specified in the site-install output.
