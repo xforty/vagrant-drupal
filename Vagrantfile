@@ -4,7 +4,7 @@
 Vagrant::Config.run do |config|
   
   #
-  # Name of imported base box.
+  # Name of imported base box. (HINT: Rename this box)
   #
   config.vm.box = "ubuntu-11.10-server-amd64"
   
@@ -19,7 +19,7 @@ Vagrant::Config.run do |config|
   # Use port-forwarding. Web site will be at http://localhost:4567
   # Forwards guest port 80 to host port 4567 and name the mapping "web".
   #
-  config.vm.forward_port("web", 80, 4567)
+  config.vm.forward_port("web", 80, 4567, :auto => true)
 
   #
   # Use host-only networking. Sets the VM's private IP address.
@@ -28,7 +28,7 @@ Vagrant::Config.run do |config|
   # add the line: "172.21.21.21   local.drupal". Do so at your
   # own risk.  Site will then available at http://local.drupal
   #
-  #config.vm.network "172.21.21.21"
+  # config.vm.network "172.21.21.21"
 
   #
   # Create /srv if it doesn't exist and share with VM.
@@ -53,7 +53,9 @@ Vagrant::Config.run do |config|
     # Specify custom JSON node attributes:
     chef.json.merge!(
       :drupal => {
-        :project_name => "drupal"
+        :project_name => "drupal",
+        # Comment out server_name if you are using host-only networking.
+        :server_name => "localhost"
       },
       :drush => {
         :version => "5.0.0"
