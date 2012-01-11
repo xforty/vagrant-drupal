@@ -6,7 +6,7 @@ Vagrant::Config.run do |config|
   #
   # Name of imported base box.
   #
-  config.vm.box = "ubuntu-11.04-server-amd64"
+  config.vm.box = "ubuntu-11.10-server-amd64"
   
   #
   # Download url of base box if it has not been previously imported.
@@ -14,11 +14,21 @@ Vagrant::Config.run do |config|
   # build your own using https://github.com/jedi4ever/veewee
   #
   config.vm.box_url = "http://dl.dropbox.com/u/56687100/ubuntu-11.10-server-amd64.box"
-  
+
   #
-  # Set the VM's private IP address.
+  # Use port-forwarding. Web site will be at http://localhost:4567
+  # Forwards guest port 80 to host port 4567 and name the mapping "web".
   #
-  config.vm.network "172.21.21.21"
+  config.vm.forward_port("web", 80, 4567)
+
+  #
+  # Use host-only networking. Sets the VM's private IP address.
+  # Un-comment this line to use.  Make sure port-forwarding is
+  # commented out. Requires you to edit your /etc/hosts file to
+  # add the line: "172.21.21.21   local.drupal". Do so at your
+  # own risk.  Site will then available at http://local.drupal
+  #
+  #config.vm.network "172.21.21.21"
 
   #
   # Create /srv if it doesn't exist and share with VM.
@@ -64,7 +74,7 @@ Vagrant::Config.run do |config|
             }
           },
           :users => {
-            "db_user" => {
+            "dbuser" => {
               :action        => :grant,
               :database_name => "drupal",
               :host          => "localhost",
