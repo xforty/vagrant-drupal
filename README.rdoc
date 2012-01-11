@@ -1,6 +1,3 @@
-# rdoc format
-# http://rdoc.rubyforge.org/RDoc/Markup.html
-
 = DESCRIPTION:
 
 Template repo for a new drupal project built on top of a vagrant vm.
@@ -10,24 +7,55 @@ Template repo for a new drupal project built on top of a vagrant vm.
 * Not windows (haven't tested it yet)
 * {VirtualBox}[http://www.virtualbox.org/] >= 4.1
 * Ruby 1.9 (just use rvm to manage your ruby version)
-* {chef}[http://wiki.opscode.com/display/chef/Installing+Chef+Client+and+Chef+Solo] gem
-* {vagrant}[http://www.vagrantup.com/] gem >= 0.10
+* {chef}[http://wiki.opscode.com/display/chef/Installing+Chef+Client+and+Chef+Solo] gem >= 0.10
+* {vagrant}[http://www.vagrantup.com/] gem
 * {librarian}[https://github.com/applicationsonline/librarian] gem
 
-= USAGE:
+= BASIC USAGE:
+Start on the host by provisioning and ssh'ing into a vm:<br/>
+<code>host$ git clone git://github.com/xforty/vagrant-drupal-project.git</code><br/>
+<code>host$ cd vagrant-drupal-project</code><br/>
+<code>host$ librarian-chef install</code><br/>
+<code>host$ vagrant up</code><br/>
+<code>host$ vagrant ssh</code><br/>
+<br/>
+Then build and install a drupal site on the vm:<br/>
+<code>vm$ sudo drush make --prepare-install /vagrant/example.make /srv/www</code><br/>
+<code>vm$ cd /srv/www</code><br/>
+<code>vm$ sudo drush site-install --db-url=mysql://dbuser:password@localhost/drupal</code><br/>
 
-On the command line:
+Go to http://localhost:4567 and log in to the drupal site with the
+credentials specified in the site-install output.
 
-<code>
-host$ git clone git://github.com/xforty/vagrant-drupal-project.git
-host$ cd vagrant-drupal-project
-host$ librarian-chef install
-host$ vagrant up
-host$ vagrant ssh
-vm$   sudo drush make --prepare-install /vagrant/example.make /srv/www
-vm$   cd /srv/www
-vm$   sudo drush site-install --db-url=mysql://dbuser:password@localhost/drupal
-</code>
+= ADVANCED USAGE:
 
-Go to {http://localhost:4567}[http://localhost:4567]. Log in to the drupal site with
-<code>admin</code> user and the password specified in the site-install output.
+By default the remote origin is the github vagrant-drupal-project.  It is
+designed to function after you clone it for development and testing purposes.
+This means you can commit to your local repository and track upstream changes.
+This is useful for single user development workflow.  However we also kept in
+mind people work on teams and need to share these repositories for each project
+they are working on.  To do this we recommend the following.
+
+* Rename the remote origin
+
+<code>host$ git remote rename origin github</code><br>
+
+* Create your bare repo
+* Add your own remote origin
+
+<code>git remote add origin git@scm.xforty.com:www.xforty.com.git</code>
+
+* Push your changes to your bare repo
+
+<code>git push origin master</code>
+
+If you are cloning from the www.xforty.com.git repo it won't contain the
+original github project. You need to add that remote. Here is how:
+
+<code>git remote add xforty git://github.com/xforty/vagrant-drupal-project.git</code>
+
+NOTE: This is a read-only repository.
+
+It is common to modify the Vagrantfile.  Consider using our
+git://github.com/xforty/xforty-drupal.git project as a starting point for youe
+distro.make file.
