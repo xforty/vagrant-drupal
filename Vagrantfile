@@ -6,14 +6,14 @@ Vagrant::Config.run do |config|
   #
   # Name of imported base box.
   #
-  config.vm.box = "lucid32"
+  config.vm.box = "ubuntu-11.04-server-amd64"
   
   #
   # Download url of base box if it has not been previously imported.
   # See http://vagrantbox.es/ for more pre-built base boxes or
   # build your own using https://github.com/jedi4ever/veewee
   #
-  config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
+  config.vm.box_url = "http://dl.dropbox.com/u/56687100/ubuntu-11.10-server-amd64.box"
   
   #
   # Set the VM's private IP address.
@@ -44,6 +44,9 @@ Vagrant::Config.run do |config|
     chef.json.merge!(
       :drupal => {
         :project_name => "drupal"
+      },
+      :drush => {
+        :version => "5.0.0"
       },
       :mysql => {
         :server_root_password => "root"
