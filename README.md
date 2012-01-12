@@ -67,4 +67,4 @@ project as a starting point for your own drupal make files.
 * [Issues](https://github.com/xforty/vagrant-drupal/issues)
 
 --------------------------------------------------------------------- 
-&copy; 2011, [xforty technologies](http://www.xforty.com)
+Maintained by [xforty technologies](http://www.xforty.com)
