@@ -1,20 +1,19 @@
-DESCRIPTION
-===========
+## DESCRIPTION
 
 Template repo for a new drupal project built on top of a vagrant vm.
 
-REQUIREMENTS
-============
+## REQUIREMENTS
 
+* [This project's source](https://github.com/xforty/vagrant-drupal-project)
 * Not windows (haven't tested it yet, but you can try)
-* [VirtualBox](http://www.virtualbox.org/] >= 4.1
-* Ruby 1.9 (just use rvm to manage your ruby version)
-* [chef](http://wiki.opscode.com/display/chef/Installing+Chef+Client+and+Chef+Solo) gem >= 0.10
+* Ruby >= 1.9.2 (do yourself a favor and use
+  [rvm](http://beginrescueend.com/) to manage your ruby environment)
+* [VirtualBox](http://www.virtualbox.org/)
 * [vagrant](http://www.vagrantup.com/) gem
+* [chef](http://wiki.opscode.com/) gem
 * [librarian](https://github.com/applicationsonline/librarian) gem
 
-BASIC USAGE
-===========
+## BASIC USAGE
 
 1. Start on the host by provisioning and logging into a vm:
 
@@ -30,11 +29,11 @@ BASIC USAGE
         vm$ cd /srv/www
         vm$ sudo drush site-install --db-url=mysql://dbuser:password@localhost/drupal
 
-3. Go to <tt>[http://localhost:4567](http://localhost:4567)</tt> and log in to the drupal site with the
-   credentials specified in the site-install output.
+3. Go to [http://localhost:4567](http://localhost:4567) and log in
+   to the drupal site with the credentials specified in the site-install
+   output.
 
-ADVANCED USAGE
-==============
+## ADVANCED USAGE
 
 By default the remote origin is the github vagrant-drupal-project.  It is
 designed to function after you clone it for development and testing purposes.
@@ -43,27 +42,21 @@ This is useful for single user development workflow.  However we also kept in
 mind people work on teams and need to share these repositories for each project
 they are working on.  To do this we recommend the following.
 
-* Rename the remote origin
-
-        host$ git remote rename origin github
-
+* Rename the remote origin: `git remote rename origin github`
 * Create your bare repo
+* Add your own remote origin: `git remote add origin [your_repo_name]`
+* Push your changes to your bare repo: `git push origin master`
 
-* Add your own remote origin
+If you are cloning directly from your repo it won't contain the original
+github project. In that case, you will need to add the upstream remote:
+`git remote add xforty git://github.com/xforty/vagrant-drupal-project.git`
 
-        host$ git remote add origin git@scm.xforty.com:www.xforty.com.git
+It is common to modify the Vagrantfile. We encourage you to read through the
+comments in the Vagrantfile as well as the official
+[Vagrant documentation](http://www.vagrantup.com) for other possible
+configurations.
 
-* Push your changes to your bare repo
+Also consider using our [xforty-drupal](https://github.com/xforty/xforty-drupal)
+project as a starting point for your own drupal make files.
 
-        host$ git push origin master
-
-If you are cloning from the www.xforty.com.git repo it won't contain the
-original github project. You need to add that remote. Here is how:
-
-    host$ git remote add xforty git://github.com/xforty/vagrant-drupal-project.git
-
-NOTE: This is a read-only repository.
-
-It is common to modify the Vagrantfile.  Consider using our
-[https://github.com/xforty/xforty-drupal](https://github.com/xforty/xforty-drupal)
-project as a starting point for your drupal make files.
+&copy; 2011, [xforty technologies](http://www.xforty.com)
