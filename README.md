@@ -4,7 +4,7 @@ Template repo for a new drupal project built on top of a vagrant vm.
 
 ## REQUIREMENTS
 
-* [This project's source](https://github.com/xforty/vagrant-drupal-project)
+* [This project's source](https://github.com/xforty/vagrant-drupal)
 * Not windows (haven't tested it yet, but you can try)
 * Ruby >= 1.9.2 (do yourself a favor and use
   [rvm](http://beginrescueend.com/) to manage your ruby environment)
@@ -17,8 +17,8 @@ Template repo for a new drupal project built on top of a vagrant vm.
 
 1. Start on the host by provisioning and logging into a vm:
 
-        host$ git clone git://github.com/xforty/vagrant-drupal-project.git
-        host$ cd vagrant-drupal-project
+        host$ git clone git://github.com/xforty/vagrant-drupal.git
+        host$ cd vagrant-drupal
         host$ librarian-chef install
         host$ vagrant up
         host$ vagrant ssh
@@ -35,7 +35,7 @@ Template repo for a new drupal project built on top of a vagrant vm.
 
 ## ADVANCED USAGE
 
-By default the remote origin is the github vagrant-drupal-project.  It is
+By default the remote origin is the github vagrant-drupal.  It is
 designed to function after you clone it for development and testing purposes.
 This means you can commit to your local repository and track upstream changes.
 This is useful for single user development workflow.  However we also kept in
@@ -49,7 +49,7 @@ they are working on.  To do this we recommend the following.
 
 If you are cloning directly from your repo it won't contain the original
 github project. In that case, you will need to add the upstream remote:
-`git remote add xforty git://github.com/xforty/vagrant-drupal-project.git`
+`git remote add xforty git://github.com/xforty/vagrant-drupal.git`
 
 It is common to modify the Vagrantfile. We encourage you to read through the
 comments in the Vagrantfile as well as the official
