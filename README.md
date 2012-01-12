@@ -1,6 +1,8 @@
 ## DESCRIPTION
 
-Template repo for a new drupal project built on top of a vagrant vm.
+Builds a Drupal environment and site on top of a Vagrant vm. This repo
+can be used as is to get a Drupal site up and running quickly or as a
+template for your own Drupal projects.
 
 ## REQUIREMENTS
 
