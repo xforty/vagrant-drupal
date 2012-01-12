@@ -59,4 +59,10 @@ configurations.
 Also consider using our [xforty-drupal](https://github.com/xforty/xforty-drupal)
 project as a starting point for your own drupal make files.
 
+## RESOURCES
+
+* [Wiki](https://github.com/xforty/vagrant-drupal/wiki)
+* [Issues](https://github.com/xforty/vagrant-drupal/issues)
+
+--------------------------------------------------------------------- 
 &copy; 2011, [xforty technologies](http://www.xforty.com)
