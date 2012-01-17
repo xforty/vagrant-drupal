@@ -28,7 +28,7 @@ SITE
     yum (0.5.2)
 
 GIT
-  remote: git@github.com:xforty/chef-drupal.git
+  remote: git://github.com/xforty/chef-drupal.git
   ref: master
   sha: 2a9d114ea88684401c6ac6420f53fd6feda6166b
   specs:
@@ -41,7 +41,7 @@ GIT
       php (>= 0.0.0)
 
 GIT
-  remote: git@github.com:xforty/chef-drush.git
+  remote: git://github.com/xforty/chef-drush.git
   ref: master
   sha: 522846df7e7740219c48cdff39d7c440ee96e807
   specs:
@@ -49,7 +49,7 @@ GIT
       php (>= 0.0.0)
 
 GIT
-  remote: git@github.com:xforty/chef-initdb.git
+  remote: git://github.com/xforty/chef-initdb.git
   ref: master
   sha: 7cf0289a5a78ef3fc36d3cebebd68b1c27254480
   specs:
@@ -57,7 +57,7 @@ GIT
       database (>= 0.0.0)
 
 GIT
-  remote: git@github.com:xforty/chef-xforty.git
+  remote: git://github.com/xforty/chef-xforty.git
   ref: master
   sha: 21a3df4e56c98134da8c25c6abe4dbc5d6e623af
   specs:
@@ -66,7 +66,7 @@ GIT
       vim (>= 0.0.0)
 
 GIT
-  remote: git@github.com:xforty/cookbooks.git
+  remote: git://github.com/xforty/cookbooks.git
   path: mysql
   ref: master
   sha: 5f4665dea396a4ce277a4a2d2c0e326c885a57ec

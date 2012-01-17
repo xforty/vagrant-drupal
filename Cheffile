@@ -7,28 +7,28 @@ cookbook 'database', '1.1.0'
 
 # Load HEAD of master branch until we tag an intial release
 cookbook 'drupal',
-  :git => 'git@github.com:xforty/chef-drupal.git',
+  :git => 'git://github.com/xforty/chef-drupal.git',
   :ref => 'master'
 
 # Load from xforty repo until pull request is completed
 # https://github.com/msonnabaum/chef-drush/pull/7
 cookbook 'drush',
-  :git => 'git@github.com:xforty/chef-drush.git',
+  :git => 'git://github.com/xforty/chef-drush.git',
   :ref => 'master'
 
 # Load HEAD of master branch until we tag an intial release
 cookbook 'initdb',
-  :git => 'git@github.com:xforty/chef-initdb.git',
+  :git => 'git://github.com/xforty/chef-initdb.git',
   :ref => 'master'
 
 # Load from xforty repo until known issue is fixed
 # https://github.com/opscode/cookbooks/pull/286
 cookbook 'mysql',
-  :git => 'git@github.com:xforty/cookbooks.git',
+  :git => 'git://github.com/xforty/cookbooks.git',
   :ref => 'master',
   :path => 'mysql'
 
 # Load HEAD of master branch until we tag an intial release
 cookbook 'xforty',
-  :git => 'git@github.com:xforty/chef-xforty.git',
+  :git => 'git://github.com/xforty/chef-xforty.git',
   :ref => 'master'
