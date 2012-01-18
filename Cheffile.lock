@@ -43,7 +43,7 @@ GIT
 GIT
   remote: git://github.com/xforty/chef-drush.git
   ref: master
-  sha: 522846df7e7740219c48cdff39d7c440ee96e807
+  sha: 6a0366ff34fb3febcc458dc0fe5d4f510a01560a
   specs:
     drush (0.9.2)
       php (>= 0.0.0)
