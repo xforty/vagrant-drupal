@@ -11,7 +11,7 @@ template for your own Drupal projects.
 * Ruby >= 1.9.2 (do yourself a favor and use
   [rvm](http://beginrescueend.com/) to manage your ruby environment)
 * [VirtualBox](http://www.virtualbox.org/)
-* [vagrant](http://www.vagrantup.com/) gem 0.8.x ([does not work with 0.9.x yet](https://github.com/xforty/vagrant-drupal/issues/4))
+* [vagrant](http://www.vagrantup.com/) gem 0.9.x
 * [chef](http://wiki.opscode.com/) gem
 * [librarian](https://github.com/applicationsonline/librarian) gem
 

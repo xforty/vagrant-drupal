@@ -19,7 +19,7 @@ Vagrant::Config.run do |config|
   # Use port-forwarding. Web site will be at http://localhost:4567
   # Forwards guest port 80 to host port 4567 and name the mapping "web".
   #
-  config.vm.forward_port("web", 80, 4567, :auto => true)
+  config.vm.forward_port(80, 4567, :auto => true)
 
   #
   # Use host-only networking. Sets the VM's private IP address.
@@ -35,8 +35,7 @@ Vagrant::Config.run do |config|
   # The /srv path is owned by www-data so apache can write to it.
   #
   srv_path = File.expand_path(File.dirname(__FILE__)) + "/srv"
-  if !File::directory?(srv_path) then Dir::mkdir(srv_path) end
-  config.vm.share_folder("srv", "/srv", srv_path, :owner => "www-data", :group => "www-data")
+  config.vm.share_folder("srv", "/srv", srv_path, :owner => "www-data", :group => "www-data", :create => true)
 
   #
   # Provision a new VM using chef-solo. The librarian gem controls
@@ -44,7 +43,7 @@ Vagrant::Config.run do |config|
   # site-specific cookbooks, place them in "site-cookbooks".
   #
   config.vm.provision :chef_solo do |chef|
-    #chef.log_level = :debug
+    # chef.log_level = :debug
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
     chef.add_recipe "xforty"
     chef.add_recipe "drupal"
