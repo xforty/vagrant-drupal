@@ -52,7 +52,7 @@ they are working on.  To do this we recommend the following.
 
 If you are cloning directly from your repo it won't contain the original
 github project. In that case, you will need to add the upstream remote:
-`git remote add xforty git://github.com/xforty/vagrant-drupal.git`
+`git remote add github git://github.com/xforty/vagrant-drupal.git`
 
 It is common to modify the Vagrantfile. We encourage you to read through the
 comments in the Vagrantfile as well as the official
