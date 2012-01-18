@@ -47,6 +47,7 @@ they are working on.  To do this we recommend the following.
 * Rename the remote origin: `git remote rename origin github`
 * Create your bare repo
 * Add your own remote origin: `git remote add origin [your_repo_name]`
+* Set your master to the remote origin: `git config branch.master.remote origin`
 * Push your changes to your bare repo: `git push origin master`
 
 If you are cloning directly from your repo it won't contain the original
