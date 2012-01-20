@@ -16,6 +16,11 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://dl.dropbox.com/u/56687100/ubuntu-11.10-server-amd64.box"
 
   #
+  # Set the memory size
+  #
+  config.vm.customize ["modifyvm", :id, "--memory", "1024"]
+
+  #
   # Use port-forwarding. Web site will be at http://localhost:4567
   # Forwards guest port 80 to host port 4567 and name the mapping "web".
   #
