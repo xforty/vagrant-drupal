@@ -28,7 +28,7 @@ Vagrant::Config.run do |config|
   # add the line: "172.21.21.21   local.drupal". Do so at your
   # own risk.  Site will then available at http://local.drupal
   #
-  # config.vm.network "172.21.21.21"
+  # config.vm.network :hostonly, "172.21.21.21"
 
   #
   # Create /srv if it doesn't exist and share with VM.
