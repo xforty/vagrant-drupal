@@ -48,7 +48,9 @@ Vagrant::Config.run do |config|
   # site-specific cookbooks, place them in "site-cookbooks".
   #
   config.vm.provision :chef_solo do |chef|
-    # chef.log_level = :debug
+
+    chef.log_level = :debug if ENV['vdb']
+
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
     chef.add_recipe "xforty"
     chef.add_recipe "drupal"
