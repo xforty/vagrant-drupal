@@ -22,6 +22,7 @@ SITE
     postgresql (0.99.2)
       openssl (>= 0.0.0)
     runit (0.14.2)
+    selinux (0.5.2)
     vim (1.0.2)
     xfs (1.0.0)
     xml (1.0.2)
@@ -30,7 +31,7 @@ SITE
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: 44c920811c24dc685362b96a5088f662e3f73f60
+  sha: 3f407c90261c0eb2de86cf61b19459b7a0ad1a95
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
@@ -66,11 +67,12 @@ GIT
 GIT
   remote: git://github.com/xforty/chef-xforty.git
   ref: master
-  sha: 86884013127331bfa56526fea7d7141635d95d37
+  sha: c35b267283c74e920b93899bc288c3c8074f3ef5
   specs:
     xforty (0.0.1)
       apt (>= 0.0.0)
       rpmforge (>= 0.0.0)
+      selinux (>= 0.0.0)
       vim (>= 0.0.0)
 
 GIT
