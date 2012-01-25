@@ -11,7 +11,7 @@ template for your own Drupal projects.
 * Ruby >= 1.9.2 (do yourself a favor and use
   [rvm](http://beginrescueend.com/) to manage your ruby environment)
 * [VirtualBox](http://www.virtualbox.org/)
-* [vagrant](http://www.vagrantup.com/) gem
+* [vagrant](http://www.vagrantup.com/) gem 0.8.x ([does not work with 0.9.x yet](https://github.com/xforty/vagrant-drupal/issues/4))
 * [chef](http://wiki.opscode.com/) gem
 * [librarian](https://github.com/applicationsonline/librarian) gem
 
@@ -47,11 +47,12 @@ they are working on.  To do this we recommend the following.
 * Rename the remote origin: `git remote rename origin github`
 * Create your bare repo
 * Add your own remote origin: `git remote add origin [your_repo_name]`
+* Set your master to the remote origin: `git config branch.master.remote origin`
 * Push your changes to your bare repo: `git push origin master`
 
 If you are cloning directly from your repo it won't contain the original
 github project. In that case, you will need to add the upstream remote:
-`git remote add xforty git://github.com/xforty/vagrant-drupal.git`
+`git remote add github git://github.com/xforty/vagrant-drupal.git`
 
 It is common to modify the Vagrantfile. We encourage you to read through the
 comments in the Vagrantfile as well as the official
