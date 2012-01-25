@@ -19,18 +19,18 @@ SITE
       build-essential (>= 0.0.0)
       mysql (>= 0.0.0)
       xml (>= 0.0.0)
-    postgresql (0.99.0)
+    postgresql (0.99.2)
       openssl (>= 0.0.0)
     runit (0.14.2)
     vim (1.0.2)
     xfs (1.0.0)
-    xml (1.0.0)
+    xml (1.0.2)
     yum (0.5.2)
 
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: 2a9d114ea88684401c6ac6420f53fd6feda6166b
+  sha: 44c920811c24dc685362b96a5088f662e3f73f60
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
@@ -57,19 +57,27 @@ GIT
       database (>= 0.0.0)
 
 GIT
+  remote: git://github.com/xforty/chef-rpmforge.git
+  ref: 0.0.1
+  sha: 9820de5f2865e6f5a35bcbb692d15467349bb155
+  specs:
+    rpmforge (0.0.1)
+
+GIT
   remote: git://github.com/xforty/chef-xforty.git
   ref: master
-  sha: 21a3df4e56c98134da8c25c6abe4dbc5d6e623af
+  sha: 86884013127331bfa56526fea7d7141635d95d37
   specs:
     xforty (0.0.1)
       apt (>= 0.0.0)
+      rpmforge (>= 0.0.0)
       vim (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/cookbooks.git
   path: mysql
   ref: master
-  sha: 5f4665dea396a4ce277a4a2d2c0e326c885a57ec
+  sha: b6bec3595ed14a25a04af15e1eedba80e7b1b7df
   specs:
     mysql (1.2.2)
       openssl (>= 0.0.0)
@@ -80,5 +88,6 @@ DEPENDENCIES
   drush (>= 0)
   initdb (>= 0)
   mysql (>= 0)
+  rpmforge (>= 0)
   xforty (>= 0)
 

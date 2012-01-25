@@ -28,6 +28,10 @@ cookbook 'mysql',
   :ref => 'master',
   :path => 'mysql'
 
+cookbook 'rpmforge',
+  :git => 'git://github.com/xforty/chef-rpmforge.git',
+  :ref => '0.0.1'
+
 # Load HEAD of master branch until we tag an intial release
 cookbook 'xforty',
   :git => 'git://github.com/xforty/chef-xforty.git',
