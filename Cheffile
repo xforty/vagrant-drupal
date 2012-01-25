@@ -4,6 +4,7 @@
 site 'http://community.opscode.com/api/v1'
 
 cookbook 'database', '1.1.0'
+cookbook 'iptables', '0.10.0'
 
 # Load HEAD of master branch until we tag an intial release
 cookbook 'drupal',

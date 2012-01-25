@@ -14,6 +14,7 @@ SITE
       runit (>= 0.0.0)
       yum (>= 0.0.0)
     imagemagick (0.2.2)
+    iptables (0.10.0)
     openssl (1.0.0)
     php (1.0.0)
       build-essential (>= 0.0.0)
@@ -79,6 +80,7 @@ DEPENDENCIES
   drupal (>= 0)
   drush (>= 0)
   initdb (>= 0)
+  iptables (= 0.10.0)
   mysql (>= 0)
   xforty (>= 0)
 
