@@ -3,8 +3,6 @@
 
 site 'http://community.opscode.com/api/v1'
 
-cookbook 'database', '1.1.0'
-
 # Load HEAD of master branch until we tag an intial release
 cookbook 'drupal',
   :git => 'git://github.com/xforty/chef-drupal.git',
@@ -27,6 +25,22 @@ cookbook 'mysql',
   :git => 'git://github.com/xforty/cookbooks.git',
   :ref => 'master',
   :path => 'mysql'
+
+cookbook 'php_curl',
+  :git => 'git://github.com/xforty/chef-php_curl.git',
+  :ref => '0.0.1'
+
+cookbook 'php_gd',
+  :git => 'git://github.com/xforty/chef-php_gd.git',
+  :ref => '0.0.1'
+
+cookbook 'php_mysql',
+  :git => 'git://github.com/xforty/chef-php_mysql.git',
+  :ref => '0.0.1'
+
+cookbook 'rpmforge',
+  :git => 'git://github.com/xforty/chef-rpmforge.git',
+  :ref => '0.0.1'
 
 # Load HEAD of master branch until we tag an intial release
 cookbook 'xforty',
