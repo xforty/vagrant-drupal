@@ -13,10 +13,6 @@ SITE
     imagemagick (0.2.2)
     iptables (0.10.0)
     openssl (1.0.0)
-    php (1.0.0)
-      build-essential (>= 0.0.0)
-      mysql (>= 0.0.0)
-      xml (>= 0.0.0)
     postgresql (0.99.2)
       openssl (>= 0.0.0)
     selinux (0.5.2)
@@ -101,17 +97,29 @@ GIT
 GIT
   remote: git://github.com/xforty/cookbooks.git
   path: mysql
-  ref: master
-  sha: b6bec3595ed14a25a04af15e1eedba80e7b1b7df
+  ref: xforty
+  sha: 0b07563c600eaf46b535ad19f3131b4c39569c54
   specs:
     mysql (1.2.2)
       openssl (>= 0.0.0)
+
+GIT
+  remote: git://github.com/xforty/cookbooks.git
+  path: php
+  ref: xforty
+  sha: 0b07563c600eaf46b535ad19f3131b4c39569c54
+  specs:
+    php (1.0.0)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
 
 DEPENDENCIES
   drupal (>= 0)
   drush (>= 0)
   initdb (>= 0)
   mysql (>= 0)
+  php (>= 0)
   php_curl (>= 0)
   php_gd (>= 0)
   php_mysql (>= 0)
