@@ -8,8 +8,7 @@ cookbook 'drupal',
   :git => 'git://github.com/xforty/chef-drupal.git',
   :ref => 'master'
 
-# Load from xforty repo until pull request is completed
-# https://github.com/msonnabaum/chef-drush/pull/7
+# Load HEAD of master branch until development calms down
 cookbook 'drush',
   :git => 'git://github.com/xforty/chef-drush.git',
   :ref => 'master'
@@ -23,8 +22,15 @@ cookbook 'initdb',
 # https://github.com/opscode/cookbooks/pull/286
 cookbook 'mysql',
   :git => 'git://github.com/xforty/cookbooks.git',
-  :ref => 'master',
+  :ref => 'xforty',
   :path => 'mysql'
+
+# Load from xforty repo until known issue is fixed
+# http://tickets.opscode.com/browse/COOK-993
+cookbook 'php',
+  :git => 'git://github.com/xforty/cookbooks.git',
+  :ref => 'xforty',
+  :path => 'php'
 
 cookbook 'php_curl',
   :git => 'git://github.com/xforty/chef-php_curl.git',
