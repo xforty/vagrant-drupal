@@ -23,7 +23,7 @@ SITE
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: cc4e823b6c7c21f4e5bb517a45bc2b860b86e3a5
+  sha: d9508f6b8a605a57c27906ae2df391bde864086e
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
@@ -31,6 +31,7 @@ GIT
       imagemagick (>= 0.0.0)
       iptables (>= 0.0.0)
       mysql (>= 0.0.0)
+      pear (>= 0.0.0)
       php (>= 0.0.0)
       php_curl (>= 0.0.0)
       php_gd (>= 0.0.0)
@@ -51,6 +52,14 @@ GIT
   specs:
     initdb (0.0.1)
       database (>= 0.0.0)
+
+GIT
+  remote: git://github.com/xforty/chef-pear.git
+  ref: master
+  sha: c72bd2ec972ca57a3b0ff1cffb6dc3037752f97b
+  specs:
+    pear (0.0.1)
+      php (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-php_curl.git
@@ -119,6 +128,7 @@ DEPENDENCIES
   drush (>= 0)
   initdb (>= 0)
   mysql (>= 0)
+  pear (>= 0)
   php (>= 0)
   php_curl (>= 0)
   php_gd (>= 0)

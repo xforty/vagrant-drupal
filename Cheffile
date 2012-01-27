@@ -25,6 +25,11 @@ cookbook 'mysql',
   :ref => 'xforty',
   :path => 'mysql'
 
+# Load HEAD of master branch until we tag an intial release
+cookbook 'pear',
+  :git => 'git://github.com/xforty/chef-pear.git',
+  :ref => 'master'
+
 # Load from xforty repo until known issue is fixed
 # http://tickets.opscode.com/browse/COOK-993
 cookbook 'php',
