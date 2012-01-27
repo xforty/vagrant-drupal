@@ -49,6 +49,10 @@ cookbook 'php_mysql',
   :git => 'git://github.com/xforty/chef-php_mysql.git',
   :ref => '0.0.1'
 
+cookbook 'php_xml',
+  :git => 'git://github.com/xforty/chef-php_xml.git',
+  :ref => '0.0.1'
+
 cookbook 'rpmforge',
   :git => 'git://github.com/xforty/chef-rpmforge.git',
   :ref => '0.0.1'

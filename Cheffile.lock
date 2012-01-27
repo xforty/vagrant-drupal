@@ -23,7 +23,7 @@ SITE
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: d9508f6b8a605a57c27906ae2df391bde864086e
+  sha: 0f01479d7c0292d428e63b54ee11e19acafb601c
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
@@ -36,6 +36,7 @@ GIT
       php_curl (>= 0.0.0)
       php_gd (>= 0.0.0)
       php_mysql (>= 0.0.0)
+      php_xml (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-drush.git
@@ -86,6 +87,14 @@ GIT
       php (>= 0.0.0)
 
 GIT
+  remote: git://github.com/xforty/chef-php_xml.git
+  ref: 0.0.1
+  sha: fba73a622475f8878ba2a953c102d322043d400f
+  specs:
+    php_xml (0.0.1)
+      php (>= 0.0.0)
+
+GIT
   remote: git://github.com/xforty/chef-rpmforge.git
   ref: 0.0.1
   sha: 9820de5f2865e6f5a35bcbb692d15467349bb155
@@ -133,6 +142,7 @@ DEPENDENCIES
   php_curl (>= 0)
   php_gd (>= 0)
   php_mysql (>= 0)
+  php_xml (>= 0)
   rpmforge (>= 0)
   xforty (>= 0)
 
