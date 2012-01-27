@@ -23,7 +23,7 @@ SITE
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: 0f01479d7c0292d428e63b54ee11e19acafb601c
+  sha: 0456535c2d89be2f89856f6f2842788e191837da
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
@@ -31,12 +31,9 @@ GIT
       imagemagick (>= 0.0.0)
       iptables (>= 0.0.0)
       mysql (>= 0.0.0)
-      pear (>= 0.0.0)
       php (>= 0.0.0)
-      php_curl (>= 0.0.0)
-      php_gd (>= 0.0.0)
-      php_mysql (>= 0.0.0)
-      php_xml (>= 0.0.0)
+      php_module (>= 0.0.0)
+      php_pear (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-drush.git
@@ -55,43 +52,19 @@ GIT
       database (>= 0.0.0)
 
 GIT
-  remote: git://github.com/xforty/chef-pear.git
+  remote: git://github.com/xforty/chef-php_module.git
   ref: master
-  sha: c72bd2ec972ca57a3b0ff1cffb6dc3037752f97b
+  sha: 9e7e8aec5ee08ca5a73896b6f10e8eb55abb7f21
   specs:
-    pear (0.0.1)
+    php_module (0.0.1)
       php (>= 0.0.0)
 
 GIT
-  remote: git://github.com/xforty/chef-php_curl.git
-  ref: 0.0.1
-  sha: 2eff3a59a57abb624eb8976409fd7878be35f185
+  remote: git://github.com/xforty/chef-php_pear.git
+  ref: master
+  sha: 669c6a8385a6ddd33acfc4b0c50196865ce2dadc
   specs:
-    php_curl (0.0.1)
-      php (>= 0.0.0)
-
-GIT
-  remote: git://github.com/xforty/chef-php_gd.git
-  ref: 0.0.1
-  sha: 62933274c9bfd487fa9f0355f2c9fa357b27e2b3
-  specs:
-    php_gd (0.0.1)
-      php (>= 0.0.0)
-
-GIT
-  remote: git://github.com/xforty/chef-php_mysql.git
-  ref: 0.0.1
-  sha: 2528ffb2c328101cf94b1305fe7794777fa4a3c1
-  specs:
-    php_mysql (0.0.1)
-      php (>= 0.0.0)
-
-GIT
-  remote: git://github.com/xforty/chef-php_xml.git
-  ref: 0.0.1
-  sha: fba73a622475f8878ba2a953c102d322043d400f
-  specs:
-    php_xml (0.0.1)
+    php_pear (0.0.1)
       php (>= 0.0.0)
 
 GIT
@@ -137,12 +110,9 @@ DEPENDENCIES
   drush (>= 0)
   initdb (>= 0)
   mysql (>= 0)
-  pear (>= 0)
   php (>= 0)
-  php_curl (>= 0)
-  php_gd (>= 0)
-  php_mysql (>= 0)
-  php_xml (>= 0)
+  php_module (>= 0)
+  php_pear (>= 0)
   rpmforge (>= 0)
   xforty (>= 0)
 

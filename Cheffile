@@ -25,11 +25,6 @@ cookbook 'mysql',
   :ref => 'xforty',
   :path => 'mysql'
 
-# Load HEAD of master branch until we tag an intial release
-cookbook 'pear',
-  :git => 'git://github.com/xforty/chef-pear.git',
-  :ref => 'master'
-
 # Load from xforty repo until known issue is fixed
 # http://tickets.opscode.com/browse/COOK-993
 cookbook 'php',
@@ -37,21 +32,15 @@ cookbook 'php',
   :ref => 'xforty',
   :path => 'php'
 
-cookbook 'php_curl',
-  :git => 'git://github.com/xforty/chef-php_curl.git',
-  :ref => '0.0.1'
+# Load HEAD of master branch until we tag an intial release
+cookbook 'php_module',
+  :git => 'git://github.com/xforty/chef-php_module.git',
+  :ref => 'master'
 
-cookbook 'php_gd',
-  :git => 'git://github.com/xforty/chef-php_gd.git',
-  :ref => '0.0.1'
-
-cookbook 'php_mysql',
-  :git => 'git://github.com/xforty/chef-php_mysql.git',
-  :ref => '0.0.1'
-
-cookbook 'php_xml',
-  :git => 'git://github.com/xforty/chef-php_xml.git',
-  :ref => '0.0.1'
+# Load HEAD of master branch until we tag an intial release
+cookbook 'php_pear',
+  :git => 'git://github.com/xforty/chef-php_pear.git',
+  :ref => 'master'
 
 cookbook 'rpmforge',
   :git => 'git://github.com/xforty/chef-rpmforge.git',
