@@ -25,8 +25,9 @@ cookbook 'mysql',
   :ref => 'xforty',
   :path => 'mysql'
 
-# Load from xforty repo until known issue is fixed
+# Load from xforty repo until known issues are fixed
 # http://tickets.opscode.com/browse/COOK-993
+# http://tickets.opscode.com/browse/COOK-996
 cookbook 'php',
   :git => 'git://github.com/xforty/cookbooks.git',
   :ref => 'xforty',

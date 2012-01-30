@@ -23,7 +23,7 @@ SITE
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: 0456535c2d89be2f89856f6f2842788e191837da
+  sha: 0a02f6243f6b90477b8ec25cf51a309bf9227d05
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
@@ -54,7 +54,7 @@ GIT
 GIT
   remote: git://github.com/xforty/chef-php_module.git
   ref: master
-  sha: 9e7e8aec5ee08ca5a73896b6f10e8eb55abb7f21
+  sha: 5836d3292ebc58b37026282ade0336aed8ba178a
   specs:
     php_module (0.0.1)
       php (>= 0.0.0)
@@ -89,7 +89,7 @@ GIT
   remote: git://github.com/xforty/cookbooks.git
   path: mysql
   ref: xforty
-  sha: 0b07563c600eaf46b535ad19f3131b4c39569c54
+  sha: b1482dab8afc9fa59b1d8aea41e2b4e9df5e1752
   specs:
     mysql (1.2.2)
       openssl (>= 0.0.0)
@@ -98,7 +98,7 @@ GIT
   remote: git://github.com/xforty/cookbooks.git
   path: php
   ref: xforty
-  sha: 0b07563c600eaf46b535ad19f3131b4c39569c54
+  sha: b1482dab8afc9fa59b1d8aea41e2b4e9df5e1752
   specs:
     php (1.0.0)
       build-essential (>= 0.0.0)
