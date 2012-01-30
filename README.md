@@ -1,3 +1,5 @@
+version 0.1.0
+
 ## DESCRIPTION
 
 Builds a Drupal environment and site on top of a Vagrant vm. This repo
