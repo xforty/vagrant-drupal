@@ -35,37 +35,21 @@ template for your own Drupal projects.
    to the drupal site with the credentials specified in the site-install
    output.
 
-## ADVANCED USAGE
-
-By default the remote origin is the github vagrant-drupal.  It is
-designed to function after you clone it for development and testing purposes.
-This means you can commit to your local repository and track upstream changes.
-This is useful for single user development workflow.  However we also kept in
-mind people work on teams and need to share these repositories for each project
-they are working on.  To do this we recommend the following.
-
-* Rename the remote origin: `git remote rename origin github`
-* Create your bare repo
-* Add your own remote origin: `git remote add origin [your_repo_name]`
-* Set your master to the remote origin: `git config branch.master.remote origin`
-* Push your changes to your bare repo: `git push origin master`
-
-If you are cloning directly from your repo it won't contain the original
-github project. In that case, you will need to add the upstream remote:
-`git remote add github git://github.com/xforty/vagrant-drupal.git`
+## Vagrant
 
 It is common to modify the Vagrantfile. We encourage you to read through the
 comments in the Vagrantfile as well as the official
 [Vagrant documentation](http://www.vagrantup.com) for other possible
 configurations.
 
-Also consider using our [xforty-drupal](https://github.com/xforty/xforty-drupal)
-project as a starting point for your own drupal make files.
-
 ## RESOURCES
 
-* [Wiki](https://github.com/xforty/vagrant-drupal/wiki)
-* [Issues](https://github.com/xforty/vagrant-drupal/issues)
+* [xforty-drupal](https://github.com/xforty/xforty-drupal) - extendable and
+  overridable drupal make files
+* [Project Wiki](https://github.com/xforty/vagrant-drupal/wiki) - HowTos,
+  FAQs, and advanced usage
+* [Project Issues](https://github.com/xforty/vagrant-drupal/issues) - submitting
+  bugs and feature requests
 
 --------------------------------------------------------------------- 
 Maintained by [xforty technologies](http://www.xforty.com)
