@@ -10,37 +10,30 @@ SITE
       mysql (>= 1.2.0)
       postgresql (>= 0.0.0)
       xfs (>= 0.0.0)
-    git (0.10.0)
-      runit (>= 0.0.0)
-      yum (>= 0.0.0)
     imagemagick (0.2.2)
     iptables (0.10.0)
     openssl (1.0.0)
-    php (1.0.0)
-      build-essential (>= 0.0.0)
-      mysql (>= 0.0.0)
-      xml (>= 0.0.0)
     postgresql (0.99.2)
       openssl (>= 0.0.0)
-    runit (0.14.2)
     selinux (0.5.2)
     vim (1.0.2)
     xfs (1.0.0)
     xml (1.0.2)
-    yum (0.5.2)
 
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: 3f407c90261c0eb2de86cf61b19459b7a0ad1a95
+  sha: 0a02f6243f6b90477b8ec25cf51a309bf9227d05
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
       drush (>= 0.0.0)
-      git (>= 0.0.0)
       imagemagick (>= 0.0.0)
+      iptables (>= 0.0.0)
       mysql (>= 0.0.0)
       php (>= 0.0.0)
+      php_module (>= 0.0.0)
+      php_pear (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-drush.git
@@ -57,6 +50,22 @@ GIT
   specs:
     initdb (0.0.1)
       database (>= 0.0.0)
+
+GIT
+  remote: git://github.com/xforty/chef-php_module.git
+  ref: master
+  sha: 5836d3292ebc58b37026282ade0336aed8ba178a
+  specs:
+    php_module (0.0.1)
+      php (>= 0.0.0)
+
+GIT
+  remote: git://github.com/xforty/chef-php_pear.git
+  ref: master
+  sha: 669c6a8385a6ddd33acfc4b0c50196865ce2dadc
+  specs:
+    php_pear (0.0.1)
+      php (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-rpmforge.git
@@ -79,19 +88,32 @@ GIT
 GIT
   remote: git://github.com/xforty/cookbooks.git
   path: mysql
-  ref: master
-  sha: b6bec3595ed14a25a04af15e1eedba80e7b1b7df
+  ref: xforty
+  sha: b1482dab8afc9fa59b1d8aea41e2b4e9df5e1752
   specs:
     mysql (1.2.2)
       openssl (>= 0.0.0)
 
+GIT
+  remote: git://github.com/xforty/cookbooks.git
+  path: php
+  ref: xforty
+  sha: b1482dab8afc9fa59b1d8aea41e2b4e9df5e1752
+  specs:
+    php (1.0.0)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
+
 DEPENDENCIES
-  database (= 1.1.0)
   drupal (>= 0)
   drush (>= 0)
   initdb (>= 0)
   iptables (= 0.10.0)
   mysql (>= 0)
+  php (>= 0)
+  php_module (>= 0)
+  php_pear (>= 0)
   rpmforge (>= 0)
   xforty (>= 0)
 

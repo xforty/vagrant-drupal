@@ -3,16 +3,12 @@
 
 site 'http://community.opscode.com/api/v1'
 
-cookbook 'database', '1.1.0'
-cookbook 'iptables', '0.10.0'
-
 # Load HEAD of master branch until we tag an intial release
 cookbook 'drupal',
   :git => 'git://github.com/xforty/chef-drupal.git',
   :ref => 'master'
 
-# Load from xforty repo until pull request is completed
-# https://github.com/msonnabaum/chef-drush/pull/7
+# Load HEAD of master branch until development calms down
 cookbook 'drush',
   :git => 'git://github.com/xforty/chef-drush.git',
   :ref => 'master'
@@ -26,8 +22,26 @@ cookbook 'initdb',
 # https://github.com/opscode/cookbooks/pull/286
 cookbook 'mysql',
   :git => 'git://github.com/xforty/cookbooks.git',
-  :ref => 'master',
+  :ref => 'xforty',
   :path => 'mysql'
+
+# Load from xforty repo until known issues are fixed
+# http://tickets.opscode.com/browse/COOK-993
+# http://tickets.opscode.com/browse/COOK-996
+cookbook 'php',
+  :git => 'git://github.com/xforty/cookbooks.git',
+  :ref => 'xforty',
+  :path => 'php'
+
+# Load HEAD of master branch until we tag an intial release
+cookbook 'php_module',
+  :git => 'git://github.com/xforty/chef-php_module.git',
+  :ref => 'master'
+
+# Load HEAD of master branch until we tag an intial release
+cookbook 'php_pear',
+  :git => 'git://github.com/xforty/chef-php_pear.git',
+  :ref => 'master'
 
 cookbook 'rpmforge',
   :git => 'git://github.com/xforty/chef-rpmforge.git',
