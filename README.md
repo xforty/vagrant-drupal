@@ -35,7 +35,7 @@ template for your own Drupal projects.
    to the drupal site with the credentials specified in the site-install
    output.
 
-## Vagrant
+## VAGRANT
 
 It is common to modify the Vagrantfile. We encourage you to read through the
 comments in the Vagrantfile as well as the official
