@@ -62,7 +62,7 @@ GIT
 GIT
   remote: git://github.com/xforty/chef-php_pear.git
   ref: master
-  sha: 669c6a8385a6ddd33acfc4b0c50196865ce2dadc
+  sha: fd509ef389f4a4f390189c8de8a04e63ac7f6c7d
   specs:
     php_pear (0.0.1)
       php (>= 0.0.0)
