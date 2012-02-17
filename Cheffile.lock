@@ -1,7 +1,7 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
-    apache2 (1.0.8)
+    apache2 (1.1.0)
     apt (1.3.2)
     aws (0.99.1)
     build-essential (1.0.0)
@@ -75,6 +75,13 @@ GIT
     rpmforge (0.0.1)
 
 GIT
+  remote: git://github.com/xforty/chef-squid.git
+  ref: master
+  sha: 446a441ae9d060a0e2403bdbaf8b220f9f5337be
+  specs:
+    squid (0.0.1)
+
+GIT
   remote: git://github.com/xforty/chef-xforty.git
   ref: master
   sha: c1ccf6724512b1332e1af965db21029bf658357c
@@ -114,5 +121,6 @@ DEPENDENCIES
   php_module (>= 0)
   php_pear (>= 0)
   rpmforge (>= 0)
+  squid (>= 0)
   xforty (>= 0)
 
