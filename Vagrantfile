@@ -75,9 +75,6 @@ Vagrant::Config.run do |config|
         # Comment out server_name if you are using host-only networking.
         :server_name => "localhost"
       },
-      :drush => {
-        :version => "5.0.0"
-      },
       :mysql => {
         :server_root_password => "root"
       },
