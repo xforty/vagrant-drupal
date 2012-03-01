@@ -33,7 +33,7 @@ Vagrant::Config.run do |config|
   # add the line: "172.21.21.21   local.drupal". Do so at your
   # own risk.  Site will then available at http://local.drupal
   #
-  # config.vm.network :hostonly, "172.21.21.21"
+  config.vm.network :hostonly, "172.21.21.21"
 
   #
   # Create /srv if it doesn't exist and share with VM.
@@ -41,6 +41,15 @@ Vagrant::Config.run do |config|
   #
   srv_path = File.expand_path(File.dirname(__FILE__)) + "/srv"
   config.vm.share_folder("srv", "/srv", srv_path, :owner => "www-data", :group => "www-data", :create => true)
+
+  #
+  # NFS Support.  The vboxfs is known to have performance issues
+  # http://vagrantup.com/docs/nfs.html#performance_benchmarks
+  #
+  # If you want to use NFS simple halt your running instance, comment out the
+  # share_folder above and uncomment the share_folder below.  
+  #
+  # config.vm.share_folder("srv", "/srv", srv_path, :nfs => true, :create => true);
 
   #
   # Provision a new VM using chef-solo. The librarian gem controls
@@ -74,7 +83,7 @@ Vagrant::Config.run do |config|
         :project_name => "drupal",
 
         # Comment out server_name if you are using host-only networking.
-        :server_name => "localhost"
+        # :server_name => "localhost"
       },
       :mysql => {
         :server_root_password => "root"
