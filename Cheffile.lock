@@ -109,6 +109,7 @@ DEPENDENCIES
   drupal (>= 0)
   drush (>= 0)
   initdb (>= 0)
+  iptables (= 0.10.0)
   mysql (>= 0)
   php (>= 0)
   php_module (>= 0)
