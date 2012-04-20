@@ -43,6 +43,15 @@ Vagrant::Config.run do |config|
   config.vm.share_folder("srv", "/srv", srv_path, :owner => "www-data", :group => "www-data", :create => true)
 
   #
+  # NFS Support.  The vboxfs is known to have performance issues
+  # http://vagrantup.com/docs/nfs.html#performance_benchmarks
+  #
+  # If you want to use NFS simple halt your running instance, comment out the
+  # share_folder above and uncomment the share_folder below.  
+  #
+  # config.vm.share_folder("srv", "/srv", srv_path, :nfs => true, :create => true);
+
+  #
   # Provision a new VM using chef-solo. The librarian gem controls
   # the "cookbook" folder, do not touch it.  If you need to create
   # site-specific cookbooks, place them in "site-cookbooks".
@@ -52,19 +61,29 @@ Vagrant::Config.run do |config|
     chef.log_level = :debug if ENV['vdb']
 
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
+
+    #
+    # Uncomment for local caching.  This makes drush make run faster on
+    # subsequent calls.
+    #
+    # chef.add_recipe "squid"
+
     chef.add_recipe "xforty"
     chef.add_recipe "drupal"
+    chef.add_recipe "drush::make"
     chef.add_recipe "initdb"
   
     # Specify custom JSON node attributes:
     chef.json.merge!(
       :drupal => {
+        # If you change the project name you need to alter your /etc/hosts name
+        # to local.project_name if you are using host-only netowrking. For
+        # example if you change the project_name to "www.xforty.com" you would
+        # add local.www.xforty.com to your /etc/hosts file.
         :project_name => "drupal",
+
         # Comment out server_name if you are using host-only networking.
         :server_name => "localhost"
-      },
-      :drush => {
-        :version => "5.0.0"
       },
       :mysql => {
         :server_root_password => "root"

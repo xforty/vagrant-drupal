@@ -51,3 +51,8 @@ cookbook 'rpmforge',
 cookbook 'xforty',
   :git => 'git://github.com/xforty/chef-xforty.git',
   :ref => 'master'
+
+# Load HEAD of master branch until we tag an intial release
+cookbook 'squid',
+  :git => 'git://github.com/xforty/chef-squid.git',
+  :ref => 'master'
