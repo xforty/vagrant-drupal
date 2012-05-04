@@ -81,9 +81,6 @@ Vagrant::Config.run do |config|
         # example if you change the project_name to "www.xforty.com" you would
         # add local.www.xforty.com to your /etc/hosts file.
         :project_name => "drupal",
-
-        # Comment out server_name if you are using host-only networking.
-        :server_name => "localhost"
       },
       :mysql => {
         :server_root_password => "root"
