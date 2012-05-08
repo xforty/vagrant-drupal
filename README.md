@@ -31,7 +31,7 @@ template for your own Drupal projects.
 
         vm$ sudo drush make --prepare-install /vagrant/example.make /srv/www
         vm$ cd /srv/www
-        vm$ sudo drush site-install --db-url=mysql://dbuser:password@localhost/drupal
+        vm$ sudo drush site-install --db-url=mysql://username:password@localhost/drupal
 
 3. Go to [http://localhost:4567](http://localhost:4567) and log in
    to the drupal site with the credentials specified in the site-install
