@@ -97,7 +97,7 @@ Vagrant::Config.run do |config|
             }
           },
           :users => {
-            "dbuser" => {
+            "username" => {
               :action        => :grant,
               :database_name => "drupal",
               :host          => "localhost",
