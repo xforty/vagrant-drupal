@@ -19,6 +19,19 @@ $aliases['local'] = array(
 );
 
 /*
+$aliases['old'] = array(
+  'uri' => 'old.[project_name]',
+  'root' => '',
+  'remote-host' => '',
+  'remote-user' => '',
+  'path-aliases' => array(
+    '%files' => 'sites/default/files',
+    '%dump' => '[path_to_tmp]/sql-sync-old.sql',
+  ),
+);
+//*/
+
+/*
 $aliases['dev'] = array(
   'uri' => 'dev.[project_name]',
   'root' => '',
