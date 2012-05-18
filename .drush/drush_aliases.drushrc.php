@@ -4,7 +4,7 @@ $aliases['local'] = array(
   'root' => '/srv/www',
   'path-aliases' => array(
     '%files' => 'sites/default/files',
-    '%dump' => '/tmp/sql-sync-local.sql', // Arbitrary location for temp files
+    '%dump' => '/tmp/sql-sync-local.sql',
   ),
   'command-specific' => array (
     'sql-sync' => array (
