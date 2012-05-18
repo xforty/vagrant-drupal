@@ -39,7 +39,7 @@ $aliases['dev'] = array(
     ),
   ),
 );
-#*/
+//*/
 
 /*
 $aliases['test'] = array(
@@ -60,7 +60,7 @@ $aliases['test'] = array(
     ),
   ),
 );
-#*/
+//*/
 
 /*
 $aliases['staging'] = array(
@@ -81,7 +81,7 @@ $aliases['staging'] = array(
     ),
   ),
 );
-#*/
+//*/
 
 /*
 $aliases['prod'] = array(
@@ -102,4 +102,4 @@ $aliases['prod'] = array(
     ),
   ),
 );
-#*/
+//*/
