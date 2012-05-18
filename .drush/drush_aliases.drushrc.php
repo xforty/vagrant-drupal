@@ -8,13 +8,11 @@ $aliases['local'] = array(
   ),
   'command-specific' => array (
     'sql-sync' => array (
-      'simulate' => '0',
       'structure-tables' => array(
         'custom' => array('cache', 'cache_filter', 'cache_menu', 'cache_page', 'history', 'sessions', 'watchdog'),
       ),
     ),
     'rsync' => array (
-      'simulate' => '0',
       'mode' => 'rlptDz',
     ),
   ),
@@ -30,14 +28,6 @@ $aliases['dev'] = array(
     '%files' => 'sites/default/files',
     '%dump' => '[path_to_tmp]/sql-sync-dev.sql',
   ),
-  'command-specific' => array (
-    'sql-sync' => array (
-      'simulate' => '1',
-    ),
-    'rsync' => array (
-      'simulate' => '1',
-    ),
-  ),
 );
 //*/
 
@@ -50,14 +40,6 @@ $aliases['test'] = array(
   'path-aliases' => array(
     '%files' => 'sites/default/files',
     '%dump' => '[path_to_tmp]/sql-sync-test.sql',
-  ),
-  'command-specific' => array (
-    'sql-sync' => array (
-      'simulate' => '1',
-    ),
-    'rsync' => array (
-      'simulate' => '1',
-    ),
   ),
 );
 //*/
@@ -72,14 +54,6 @@ $aliases['staging'] = array(
     '%files' => 'sites/default/files',
     '%dump' => '[path_to_tmp]/sql-sync-staging.sql',
   ),
-  'command-specific' => array (
-    'sql-sync' => array (
-      'simulate' => '1',
-    ),
-    'rsync' => array (
-      'simulate' => '1',
-    ),
-  ),
 );
 //*/
 
@@ -92,14 +66,6 @@ $aliases['prod'] = array(
   'path-aliases' => array(
     '%files' => 'sites/default/files',
     '%dump' => '[path_to_tmp]/sql-sync-prod.sql',
-  ),
-  'command-specific' => array (
-    'sql-sync' => array (
-      'simulate' => '1',
-    ),
-    'rsync' => array (
-      'simulate' => '1',
-    ),
   ),
 );
 //*/
