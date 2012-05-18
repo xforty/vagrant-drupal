@@ -72,7 +72,7 @@ $aliases['staging'] = array(
 
 /*
 $aliases['prod'] = array(
-  'uri' => 'www.[project_name]', // could also be any other subdomain
+  'uri' => '[www.][project_name]',
   'root' => '',
   'remote-host' => '',
   'remote-user' => '',
