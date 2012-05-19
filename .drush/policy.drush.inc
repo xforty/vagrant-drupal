@@ -16,25 +16,27 @@
  */
 
 /**
- * Implementation of drush_hook_COMMAND_validate().
+ * Implementation of drush_hook_COMMAND_validate() for sql-sync.
  *
- * Prevent catastrophic braino. Note that this file has to be local to the machine
- * that intitiates sql-sync command.
+ * Prevent catastrophic braino. Note that this file has to be local to
+ * the machine that intitiates the sql-sync command.
  */
 function drush_policy_sql_sync_validate($source = NULL, $destination = NULL) {
   if ($destination == '@prod') {
-    return drush_set_error(dt('Per policy.drush.inc, you may never overwrite the production database.'));
+    return drush_set_error(dt('Per policy.drush.inc, you may never overwrite '
+        . 'the production database.'));
   }
 }
 
 /**
- * Implementation of drush_hook_COMMAND_validate().
+ * Implementation of drush_hook_COMMAND_validate() for core-rsync.
  *
- * Prevent catastrophic braino. Note that this file has to be local to the machine
- * that intitiates core-rsync command.
+ * Prevent catastrophic braino. Note that this file has to be local to
+ * the machine that intitiates the core-rsync command.
  */
 function drush_policy_core_rsync_validate($source, $destination, $additional_options = array()) {
   if ($destination == '@prod') {
-    return drush_set_error(dt('Per policy.drush.inc, you may never overwrite the production files folder.'));
+    return drush_set_error(dt('Per policy.drush.inc, you may never overwrite '
+        . 'the production code or files folder.'));
   }
 }
