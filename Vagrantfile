@@ -62,12 +62,7 @@ Vagrant::Config.run do |config|
 
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
 
-    #
-    # Uncomment for local caching.  This makes drush make run faster on
-    # subsequent calls.
-    #
-    # chef.add_recipe "squid"
-
+    chef.add_recipe "squid"
     chef.add_recipe "xforty"
     chef.add_recipe "drupal"
     chef.add_recipe "initdb"
