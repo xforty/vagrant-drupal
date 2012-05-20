@@ -34,7 +34,7 @@ SITE
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: 53cd784886b6a160de59770beef9afd4b44836fa
+  sha: 9196d1131d3c63fe0ffe4248a272ac254dab2cd6
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
