@@ -65,6 +65,15 @@ GIT
       database (>= 0.0.0)
 
 GIT
+  remote: git://github.com/xforty/chef-mysql.git
+  ref: xforty
+  sha: 0fb3d78a27996072497c69427960f0c61ec61ae5
+  specs:
+    mysql (1.2.4)
+      openssl (>= 0.0.0)
+      windows (>= 0.0.0)
+
+GIT
   remote: git://github.com/xforty/chef-php_module.git
   ref: master
   sha: 5836d3292ebc58b37026282ade0336aed8ba178a
@@ -104,15 +113,6 @@ GIT
       rpmforge (>= 0.0.0)
       selinux (>= 0.0.0)
       vim (>= 0.0.0)
-
-GIT
-  remote: git://github.com/xforty/cookbooks.git
-  path: mysql
-  ref: xforty
-  sha: b1482dab8afc9fa59b1d8aea41e2b4e9df5e1752
-  specs:
-    mysql (1.2.2)
-      openssl (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/cookbooks.git
