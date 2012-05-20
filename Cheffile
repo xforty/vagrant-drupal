@@ -19,7 +19,7 @@ cookbook 'initdb',
   :ref => 'master'
 
 # Load from xforty repo until known issue is fixed
-# https://github.com/opscode/cookbooks/pull/286
+# http://tickets.opscode.com/browse/COOK-932
 cookbook 'mysql',
   :git => 'git://github.com/xforty/cookbooks.git',
   :ref => 'xforty',
