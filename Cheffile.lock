@@ -17,6 +17,10 @@ SITE
     imagemagick (0.2.2)
     iptables (0.10.0)
     openssl (1.0.0)
+    php (1.0.2)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
     postgresql (0.99.4)
       openssl (>= 0.0.0)
     runit (0.15.0)
@@ -114,23 +118,11 @@ GIT
       selinux (>= 0.0.0)
       vim (>= 0.0.0)
 
-GIT
-  remote: git://github.com/xforty/cookbooks.git
-  path: php
-  ref: xforty
-  sha: b1482dab8afc9fa59b1d8aea41e2b4e9df5e1752
-  specs:
-    php (1.0.0)
-      build-essential (>= 0.0.0)
-      mysql (>= 0.0.0)
-      xml (>= 0.0.0)
-
 DEPENDENCIES
   drupal (>= 0)
   drush (>= 0)
   initdb (>= 0)
   mysql (>= 0)
-  php (>= 0)
   php_module (>= 0)
   php_pear (>= 0)
   rpmforge (>= 0)
