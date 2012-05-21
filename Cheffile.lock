@@ -95,10 +95,10 @@ GIT
 
 GIT
   remote: git://github.com/xforty/chef-rpmforge.git
-  ref: 0.0.1
-  sha: 337eb0a3ee5213d2db0f11d09d6f23c16d51fa04
+  ref: 0.1.0
+  sha: 11824dd7c0ba1ece39bfd93c6d694cff007e17e6
   specs:
-    rpmforge (0.0.1)
+    rpmforge (0.1.0)
 
 GIT
   remote: git://github.com/xforty/chef-squid.git
