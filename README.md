@@ -13,7 +13,7 @@ template for your own Drupal projects.
 * Ruby >= 1.9.2 (do yourself a favor and use
   [rvm](http://beginrescueend.com/) to manage your ruby environment)
 * [VirtualBox](http://www.virtualbox.org/)
-* [vagrant](http://www.vagrantup.com/) gem 0.9.x
+* [vagrant](http://www.vagrantup.com/) gem >= 1.0.3
 * [chef](http://wiki.opscode.com/) gem
 * [librarian](https://github.com/applicationsonline/librarian) gem
 
