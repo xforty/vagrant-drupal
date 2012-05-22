@@ -38,7 +38,7 @@ SITE
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: 9196d1131d3c63fe0ffe4248a272ac254dab2cd6
+  sha: 87d238ce1b3805bfe0aec47bec94f8a197c39f0a
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
@@ -53,7 +53,7 @@ GIT
 GIT
   remote: git://github.com/xforty/chef-drush.git
   ref: master
-  sha: a99b5a3b7e1bc02f3a56ebbbebe326ee4fbe3c0e
+  sha: d0ccff212be6390f267c719f70dba009d6f0f3f7
   specs:
     drush (0.9.2)
       git (>= 0.0.0)
