@@ -31,9 +31,9 @@ template for your own Drupal projects.
 
 2. Then build and install a drupal site on the vm:
 
-        vm$ sudo drush make --prepare-install /vagrant/example.make /srv/www
+        vm$ drush make --prepare-install /vagrant/example.make /srv/www
         vm$ cd /srv/www
-        vm$ sudo drush site-install --db-url=mysql://username:password@localhost/drupal
+        vm$ drush site-install --db-url=mysql://username:password@localhost/drupal
 
 3. Go to [http://localhost:4567](http://localhost:4567) and log in
    to the drupal site with the credentials specified in the site-install

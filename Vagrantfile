@@ -42,7 +42,7 @@ Vagrant::Config.run do |config|
   # The /srv path is owned by www-data so apache can write to it.
   #
   srv_path = File.expand_path(File.dirname(__FILE__)) + "/srv"
-  config.vm.share_folder("srv", "/srv", srv_path, :owner => "www-data", :group => "www-data", :create => true)
+  config.vm.share_folder("srv", "/srv", srv_path, :owner => "vagrant", :group => "www-data", :create => true)
 
   #
   # NFS Support.  The vboxfs is known to have performance issues
