@@ -12,6 +12,8 @@ template for your own Drupal projects.
 * Not windows (haven't tested it yet, but you can try)
 * Ruby >= 1.9.2 (do yourself a favor and use
   [rvm](http://beginrescueend.com/) to manage your ruby environment)
+  (This includes ruby version in your basebox built from
+  [veewee](https://github.com/xforty/veewee-templates))
 * [VirtualBox](http://www.virtualbox.org/)
 * [vagrant](http://www.vagrantup.com/) gem >= 1.0.3
 * [chef](http://wiki.opscode.com/) gem

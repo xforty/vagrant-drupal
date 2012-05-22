@@ -6,14 +6,16 @@ Vagrant::Config.run do |config|
   #
   # Name of imported base box. (HINT: Rename this box)
   #
-  config.vm.box = "ubuntu-11.10-server-amd64"
+  config.vm.box = "ubuntu-10.04.4-server-amd64"
   
   #
   # Download url of base box if it has not been previously imported.
   # See http://vagrantbox.es/ for more pre-built base boxes or
   # build your own using https://github.com/jedi4ever/veewee
   #
-  config.vm.box_url = "http://dl.dropbox.com/u/56687100/ubuntu-11.10-server-amd64.box"
+  # The one below has been built with https://github.com/xforty/veewee-templates
+  #
+  config.vm.box_url = "http://dl.dropbox.com/u/56687100/ubuntu-10.04.4-server-amd64.box"
 
   #
   # Set the memory size
