@@ -53,7 +53,3 @@ srv
 # .drush cache #
 ################
 .drush/cache
-
-# .ssh known_hosts #
-####################
-.ssh/known_hosts
