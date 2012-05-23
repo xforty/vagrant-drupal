@@ -1,9 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# Fix .ssh directory permssions [GH-#29]
-File.chmod(0700,".ssh");
-
 Vagrant::Config.run do |config|
   
   #
