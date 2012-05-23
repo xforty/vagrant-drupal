@@ -26,6 +26,14 @@ Vagrant::Config.run do |config|
   config.vm.customize ["modifyvm", :id, "--memory", "512"]
 
   #
+  # VirtualBox performance improvements
+  # http://www.virtualbox.org/manual/ch08.html
+  #
+  config.vm.customize ["modifyvm", :id, "--nictype1", "virtio"]
+  config.vm.customize ["modifyvm", :id, "--nictype2", "virtio"]
+  config.vm.customize ["storagectl", :id, "--name", "SATA Controller", "--hostiocache", "off"]
+
+  #
   # Use port-forwarding. Web site will be at http://localhost:4567
   # Forwards guest port 80 to host port 4567 and name the mapping "web".
   #
