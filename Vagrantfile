@@ -20,7 +20,7 @@ Vagrant::Config.run do |config|
   #
   # Set the memory size
   #
-  config.vm.customize ["modifyvm", :id, "--memory", "512"]
+  config.vm.customize ["modifyvm", :id, "--memory", "1024"]
 
   #
   # VirtualBox performance improvements
