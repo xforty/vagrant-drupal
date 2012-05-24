@@ -113,4 +113,15 @@ Vagrant::Config.run do |config|
       }
     )
   end
+
+  # Turn off StrictHostKeyChecking for vagrant user due to the Drush 5 make
+  # command no longer being interactive.  See http://drupal.org/node/1567528
+  # and https://github.com/xforty/vagrant-drupal/issues/29 for more info.
+  config.vm.provision :shell do |shell|
+    file = "/home/vagrant/.ssh/config"
+    shell.inline = "touch #{file} " +
+        " && grep -q 'StrictHostKeyChecking' #{file} || echo 'StrictHostKeyChecking no' >> #{file}" +
+        " && chown -R vagrant:vagrant /home/vagrant/.ssh"
+  end
+
 end
