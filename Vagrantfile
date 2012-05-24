@@ -4,7 +4,7 @@
 Vagrant::Config.run do |config|
   
   #
-  # Name of imported base box. (HINT: Rename this box)
+  # Name of imported base box.
   #
   config.vm.box = "ubuntu-10.04.4-server-amd64"
   
