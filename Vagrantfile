@@ -76,7 +76,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "xforty"
     chef.add_recipe "drupal"
     chef.add_recipe "initdb"
-  
+
     # Specify custom JSON node attributes:
     chef.json.merge!(
       :drupal => {
