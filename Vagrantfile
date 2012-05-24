@@ -57,7 +57,7 @@ Vagrant::Config.run do |config|
   # http://vagrantup.com/docs/nfs.html#performance_benchmarks
   #
   # If you want to use NFS simple halt your running instance, comment out the
-  # share_folder above and uncomment the share_folder below.  
+  # share_folder above and uncomment the share_folder below.
   #
   # config.vm.share_folder("srv", "/srv", srv_path, :nfs => true, :create => true);
 
