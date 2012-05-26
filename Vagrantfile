@@ -2,10 +2,10 @@
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
-  
+
   # Name of base box to be used
   config.vm.box = "ubuntu-10.04.4-server-amd64"
-  
+
   # Url of base box in case vagrant needs to download it
   config.vm.box_url = "http://dl.dropbox.com/u/56687100/ubuntu-10.04.4-server-amd64.box"
 
@@ -28,7 +28,7 @@ Vagrant::Config.run do |config|
 
   # Path to our shared folder for project files.
   srv_path = File.expand_path(File.dirname(__FILE__)) + "/srv"
-  
+
   # Use vboxfs for shared folder.
   config.vm.share_folder("srv", "/srv", srv_path, :owner => "vagrant", :group => "www-data", :create => true)
 
