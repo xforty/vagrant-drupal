@@ -49,3 +49,7 @@ cookbooks
 # Project folders #
 ###################
 srv
+
+# .drush cache #
+################
+.drush/cache

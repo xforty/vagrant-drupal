@@ -2,69 +2,79 @@
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
-  
-  #
-  # Name of imported base box. (HINT: Rename this box)
-  #
-  config.vm.box = "ubuntu-11.10-server-amd64"
-  
-  #
-  # Download url of base box if it has not been previously imported.
-  # See http://vagrantbox.es/ for more pre-built base boxes or
-  # build your own using https://github.com/jedi4ever/veewee
-  #
-  config.vm.box_url = "http://dl.dropbox.com/u/56687100/ubuntu-11.10-server-amd64.box"
 
-  #
+  #################################
+  # Base box and vm configuration #
+  #################################
+
+  # Name of base box to be used
+  config.vm.box = "ubuntu-10.04.4-server-amd64"
+
+  # Url of base box in case vagrant needs to download it
+  config.vm.box_url = "http://dl.dropbox.com/u/56687100/ubuntu-10.04.4-server-amd64.box"
+
   # Set the memory size
-  #
   config.vm.customize ["modifyvm", :id, "--memory", "1024"]
 
-  #
+  # VirtualBox performance improvements
+  config.vm.customize ["modifyvm", :id, "--nictype1", "virtio"]
+  config.vm.customize ["modifyvm", :id, "--nictype2", "virtio"]
+  config.vm.customize ["storagectl", :id, "--name", "SATA Controller", "--hostiocache", "off"]
+
+  #################################
+  # Networking                    #
+  #################################
+
   # Use port-forwarding. Web site will be at http://localhost:4567
-  # Forwards guest port 80 to host port 4567 and name the mapping "web".
-  #
   config.vm.forward_port(80, 4567, :auto => true)
 
-  #
-  # Use host-only networking. Sets the VM's private IP address.
-  # Un-comment this line to use.  Make sure port-forwarding is
-  # commented out. Requires you to edit your /etc/hosts file to
-  # add the line: "172.21.21.21   local.drupal". Do so at your
-  # own risk.  Site will then available at http://local.drupal
+  # Use host-only networking. Un-comment this line to use. Requires you to
+  # edit your /etc/hosts file to add the line: "172.21.21.21   local.drupal".
+  # Do so at your own risk. Site will then available at http://local.drupal
   #
   # config.vm.network :hostonly, "172.21.21.21"
 
-  #
-  # Create /srv if it doesn't exist and share with VM.
-  # The /srv path is owned by www-data so apache can write to it.
-  #
-  srv_path = File.expand_path(File.dirname(__FILE__)) + "/srv"
-  config.vm.share_folder("srv", "/srv", srv_path, :owner => "www-data", :group => "www-data", :create => true)
+  #################################
+  # Shared Folders                #
+  #################################
 
+  # Path to our shared folder for project files.
+  srv_path = File.expand_path(File.dirname(__FILE__)) + "/srv"
+
+  # Use vboxfs for shared folder.
+  config.vm.share_folder("srv", "/srv", srv_path, :owner => "vagrant", :group => "www-data", :create => true)
+
+  # Use nfs for shared folder. Just un-comment this line and turn on
+  # host-only networking. vboxfs is known to have performance issues
+  # on non-windows hosts. http://vagrantup.com/docs/nfs.html
   #
-  # Provision a new VM using chef-solo. The librarian gem controls
+  # config.vm.share_folder("srv", "/srv", srv_path, :nfs => true, :create => true);
+
+  #################################
+  # Provisioners                  #
+  #################################
+
+  # Provision a new vm using chef-solo. The librarian gem controls
   # the "cookbook" folder, do not touch it.  If you need to create
   # site-specific cookbooks, place them in "site-cookbooks".
-  #
   config.vm.provision :chef_solo do |chef|
 
     chef.log_level = :debug if ENV['vdb']
-
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
+
+    chef.add_recipe "squid"
     chef.add_recipe "xforty"
     chef.add_recipe "drupal"
     chef.add_recipe "initdb"
-  
-    # Specify custom JSON node attributes:
+
+    # Specify custom JSON node attributes
     chef.json.merge!(
       :drupal => {
+        # Used in the Apache VirtualHost. If using host-only networking and
+        # you change this attribute, /etc/hosts needs the name for the ip set
+        # to local.<project_name>. For example, if project_name is xforty.com,
+        # you would set the ip to local.xforty.com in your /etc/hosts file.
         :project_name => "drupal",
-        # Comment out server_name if you are using host-only networking.
-        :server_name => "localhost"
-      },
-      :drush => {
-        :version => "5.0.0"
       },
       :mysql => {
         :server_root_password => "root"
@@ -82,7 +92,7 @@ Vagrant::Config.run do |config|
             }
           },
           :users => {
-            "dbuser" => {
+            "username" => {
               :action        => :grant,
               :database_name => "drupal",
               :host          => "localhost",
@@ -93,4 +103,8 @@ Vagrant::Config.run do |config|
       }
     )
   end
+
+  # Run any necessary shell commands on the vm
+  config.vm.provision :shell, :path => "bin/postvagrant.sh"
+
 end
