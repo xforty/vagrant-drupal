@@ -3,6 +3,10 @@
 
 Vagrant::Config.run do |config|
 
+  #################################
+  # Base box and vm configuration #
+  #################################
+
   # Name of base box to be used
   config.vm.box = "ubuntu-10.04.4-server-amd64"
 
@@ -17,6 +21,10 @@ Vagrant::Config.run do |config|
   config.vm.customize ["modifyvm", :id, "--nictype2", "virtio"]
   config.vm.customize ["storagectl", :id, "--name", "SATA Controller", "--hostiocache", "off"]
 
+  #################################
+  # Networking                    #
+  #################################
+
   # Use port-forwarding. Web site will be at http://localhost:4567
   config.vm.forward_port(80, 4567, :auto => true)
 
@@ -25,6 +33,10 @@ Vagrant::Config.run do |config|
   # Do so at your own risk. Site will then available at http://local.drupal
   #
   # config.vm.network :hostonly, "172.21.21.21"
+
+  #################################
+  # Shared Folders                #
+  #################################
 
   # Path to our shared folder for project files.
   srv_path = File.expand_path(File.dirname(__FILE__)) + "/srv"
@@ -37,6 +49,10 @@ Vagrant::Config.run do |config|
   # on non-windows hosts. http://vagrantup.com/docs/nfs.html
   #
   # config.vm.share_folder("srv", "/srv", srv_path, :nfs => true, :create => true);
+
+  #################################
+  # Provisioners                  #
+  #################################
 
   # Provision a new vm using chef-solo. The librarian gem controls
   # the "cookbook" folder, do not touch it.  If you need to create

@@ -1,25 +1,25 @@
-version 0.1.0
-
-## DESCRIPTION
+vagrant-drupal
+==============
+version 0.2.0 - [changelog](https://github.com/xforty/vagrant-drupal/blob/master/CHANGELOG.md)
 
 Builds a Drupal environment and site on top of a Vagrant vm. This repo
 can be used as is to get a Drupal site up and running quickly or as a
-template for your own Drupal projects.
+template for your own Drupal projects. If you want to read more about
+the project or have questions, see the
+[resources](https://github.com/xforty/vagrant-drupal#resources)
+section below.
 
-## REQUIREMENTS
+### Requirements
 
-* [This project's source](https://github.com/xforty/vagrant-drupal)
-* Not windows (haven't tested it yet, but you can try)
-* Ruby >= 1.9.2 (do yourself a favor and use
-  [rvm](http://beginrescueend.com/) to manage your ruby environment)
-  (This includes ruby version in your basebox built from
-  [veewee](https://github.com/xforty/veewee-templates))
-* [VirtualBox](http://www.virtualbox.org/)
+* [Not Windows](https://github.com/xforty/vagrant-drupal/wiki/Windows)
+* [vagrant-drupal](https://github.com/xforty/vagrant-drupal)
+* [Ruby](http://www.ruby-lang.org/) >= 1.9.2 (on both host and base box)
+* [VirtualBox](http://www.virtualbox.org/) >= 4.1.0
 * [vagrant](http://www.vagrantup.com/) gem >= 1.0.3
-* [chef](http://wiki.opscode.com/) gem
-* [librarian](https://github.com/applicationsonline/librarian) gem
+* [chef](http://wiki.opscode.com/) gem >= 0.10.8
+* [librarian](https://github.com/applicationsonline/librarian) gem >= 0.0.23
 
-## BASIC USAGE
+### Basic Usage
 
 1. Start on the host by provisioning and logging into a vm:
 
@@ -39,21 +39,25 @@ template for your own Drupal projects.
    to the drupal site with the credentials specified in the site-install
    output.
 
-## VAGRANT
+### Vagrant
 
-It is common to modify the Vagrantfile. We encourage you to read through the
-comments in the Vagrantfile as well as the official
-[Vagrant documentation](http://www.vagrantup.com) for other possible
-configurations.
+It is common to modify the Vagrantfile to meet project needs. We encourage
+you to read through the comments in the Vagrantfile as well as the official
+[Vagrant documentation](http://www.vagrantup.com/docs/vagrantfile.html)
+for other possible configurations.
 
-## RESOURCES
+### Resources
 
 * [xforty-drupal](https://github.com/xforty/xforty-drupal) - extendable and
-  overridable drupal make files
+  overridable drush make files
 * [Project Wiki](https://github.com/xforty/vagrant-drupal/wiki) - HowTos,
   FAQs, and advanced usage
-* [Project Issues](https://github.com/xforty/vagrant-drupal/issues) - submitting
-  bugs and feature requests
+* [Project Issues](https://github.com/xforty/vagrant-drupal/issues) - submit
+  bugs, support questions, and feature requests
+* [Base Boxes](https://github.com/xforty/vagrant-drupal/wiki/Base-Boxes) -
+  links to resources for finding pre-built boxes or building your own
+* [Development](https://github.com/xforty/vagrant-drupal/wiki/Development) -
+  details on the project's development workflow
 
 --------------------------------------------------------------------- 
 Maintained by [xforty technologies](http://www.xforty.com)
