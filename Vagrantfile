@@ -119,7 +119,12 @@ Vagrant::Config.run do |config|
       },
       'php' => {
         'directives' => {
-          'memory_limit' => '256M'
+          'cgi' => {
+            'memory_limit' => '256M'
+          },
+          'cli' => {
+            'memory_limit' => '256M'
+          }
         }
       }
     )
