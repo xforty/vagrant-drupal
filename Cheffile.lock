@@ -78,7 +78,7 @@ GIT
 GIT
   remote: git://github.com/xforty/chef-php.git
   ref: xforty
-  sha: 0c19ca4f726e97df2d7e16b3f6093d36e543d217
+  sha: 2160698059b326a81fbc72322d7743100b37227a
   specs:
     php (1.0.2)
       build-essential (>= 0.0.0)
