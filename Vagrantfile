@@ -126,6 +126,16 @@ Vagrant::Config.run do |config|
             'memory_limit' => '256M'
           }
         }
+      },
+      'apache' => {
+        'prefork' => {
+          'startservers'        => 4,
+          'minspareservers'     => 4,
+          'maxspareservers'     => 4,
+          'serverlimit'         => 4,
+          'maxclients'          => 4,
+          'maxrequestsperchild' => 1000
+        }
       }
     )
   end
