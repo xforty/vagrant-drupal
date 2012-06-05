@@ -25,7 +25,6 @@ section below.
 
         host$ git clone git://github.com/xforty/vagrant-drupal.git
         host$ cd vagrant-drupal
-        host$ librarian-chef install
         host$ vagrant up
         host$ vagrant ssh
 
