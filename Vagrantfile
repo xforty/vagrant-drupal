@@ -116,6 +116,11 @@ Vagrant::Config.run do |config|
             }
           }
         }
+      },
+      'php' => {
+        'directives' => {
+          'memory_limit' => '256M'
+        }
       }
     )
   end

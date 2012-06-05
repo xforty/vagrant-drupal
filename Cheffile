@@ -24,6 +24,12 @@ cookbook 'mysql',
   :git => 'git://github.com/xforty/chef-mysql.git',
   :ref => 'xforty'
 
+# Load from xforty repo until known issue is fixed
+# http://tickets.opscode.com/browse/COOK-543
+cookbook 'php',
+  :git => 'git://github.com/xforty/chef-php.git',
+  :ref => 'xforty'
+
 # Load HEAD of master branch until we tag an intial release
 cookbook 'php_module',
   :git => 'git://github.com/xforty/chef-php_module.git',

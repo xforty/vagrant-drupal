@@ -19,10 +19,6 @@ SITE
     imagemagick (0.2.2)
     iptables (0.10.0)
     openssl (1.0.0)
-    php (1.0.2)
-      build-essential (>= 0.0.0)
-      mysql (>= 0.0.0)
-      xml (>= 0.0.0)
     postgresql (0.99.4)
       openssl (>= 0.0.0)
     runit (0.15.0)
@@ -80,6 +76,16 @@ GIT
       windows (>= 0.0.0)
 
 GIT
+  remote: git://github.com/xforty/chef-php.git
+  ref: xforty
+  sha: 0c19ca4f726e97df2d7e16b3f6093d36e543d217
+  specs:
+    php (1.0.2)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
+
+GIT
   remote: git://github.com/xforty/chef-php_module.git
   ref: master
   sha: 5836d3292ebc58b37026282ade0336aed8ba178a
@@ -125,6 +131,7 @@ DEPENDENCIES
   drush (>= 0)
   initdb (>= 0)
   mysql (>= 0)
+  php (>= 0)
   php_module (>= 0)
   php_pear (>= 0)
   rpmforge (>= 0)
