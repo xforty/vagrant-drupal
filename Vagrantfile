@@ -51,6 +51,19 @@ Vagrant::Config.run do |config|
   # config.vm.share_folder("srv", "/srv", srv_path, :nfs => true, :create => true);
 
   #################################
+  # Librarian                     #
+  #################################
+
+  # Path to our cookbooks folder
+  cookbooks_path = File.expand_path(File.dirname(__FILE__)) + "/cookbooks"
+
+  # Run librarian if cookbooks folder does not exist or is empty
+  if !Dir::exists?(cookbooks_path) || (Dir.entries(cookbooks_path).size < 3)
+    puts 'Running "librarian-chef install"...'
+    puts `librarian-chef install`
+  end
+
+  #################################
   # Provisioners                  #
   #################################
 
