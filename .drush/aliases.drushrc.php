@@ -4,7 +4,7 @@
 $project_name='drupal';
 
 $aliases['local'] = array(
-  'uri' => 'local.$project_name',
+  'uri' => "local.$project_name",
   'root' => '/srv/www',
   'path-aliases' => array(
     '%files' => 'sites/default/files',
@@ -24,7 +24,7 @@ $aliases['local'] = array(
 
 /*
 $aliases['old'] = array(
-  'uri' => 'old.$project_name',
+  'uri' => "old.$project_name",
   'root' => '',
   'remote-host' => '',
   'remote-user' => '',
@@ -37,7 +37,7 @@ $aliases['old'] = array(
 
 /*
 $aliases['dev'] = array(
-  'uri' => 'dev.$project_name',
+  'uri' => "dev.$project_name",
   'root' => '',
   'remote-host' => '',
   'remote-user' => '',
@@ -50,7 +50,7 @@ $aliases['dev'] = array(
 
 /*
 $aliases['test'] = array(
-  'uri' => 'test.$project_name',
+  'uri' => "test.$project_name",
   'root' => '',
   'remote-host' => '',
   'remote-user' => '',
@@ -63,7 +63,7 @@ $aliases['test'] = array(
 
 /*
 $aliases['staging'] = array(
-  'uri' => 'staging.$project_name',
+  'uri' => "staging.$project_name",
   'root' => '',
   'remote-host' => '',
   'remote-user' => '',
@@ -76,7 +76,7 @@ $aliases['staging'] = array(
 
 /*
 $aliases['prod'] = array(
-  'uri' => '[www.]$project_name',
+  'uri' => "[www.]$project_name",
   'root' => '',
   'remote-host' => '',
   'remote-user' => '',
