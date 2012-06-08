@@ -7,6 +7,9 @@ Vagrant::Config.run do |config|
   # Base box and vm configuration #
   #################################
 
+  # Set the vm's host name (displays in shell prompt)
+  config.vm.host_name = "ubuntu-10"
+
   # Name of base box to be used
   config.vm.box = "ubuntu-10.04.4-server-amd64"
 
