@@ -57,13 +57,17 @@ Vagrant::Config.run do |config|
   # Librarian                     #
   #################################
 
-  # Path to our cookbooks folder
-  cookbooks_path = File.expand_path(File.dirname(__FILE__)) + "/cookbooks"
+  # Only run if "up" was called
+  if ARGV.first == "up"
 
-  # Run librarian if cookbooks folder does not exist or is empty
-  if !Dir::exists?(cookbooks_path) || (Dir.entries(cookbooks_path).size < 3)
-    puts 'Running "librarian-chef install"...'
-    puts `librarian-chef install`
+    # Path to our cookbooks folder
+    cookbooks_path = File.expand_path(File.dirname(__FILE__)) + "/cookbooks"
+
+    # Run librarian if cookbooks folder does not exist or is empty
+    if !Dir::exists?(cookbooks_path) || (Dir.entries(cookbooks_path).size < 3)
+      puts 'Running "librarian-chef install"...'
+      puts `librarian-chef install`
+    end
   end
 
   #################################
