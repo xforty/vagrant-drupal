@@ -29,7 +29,7 @@ $aliases['old'] = array(
   'remote-user' => '',
   'path-aliases' => array(
     '%files' => 'sites/default/files',
-    '%dump' => '/tmp/sql-sync-old.sql',
+    '%dump' => '/home/<remote_user>/tmp/sql-sync-old.sql',
   ),
 );
 //*/
@@ -42,7 +42,7 @@ $aliases['dev'] = array(
   'remote-user' => '',
   'path-aliases' => array(
     '%files' => 'sites/default/files',
-    '%dump' => '/tmp/sql-sync-dev.sql',
+    '%dump' => '/home/<remote_user>/tmp/sql-sync-dev.sql',
   ),
 );
 //*/
@@ -55,7 +55,7 @@ $aliases['test'] = array(
   'remote-user' => '',
   'path-aliases' => array(
     '%files' => 'sites/default/files',
-    '%dump' => '/tmp/sql-sync-test.sql',
+    '%dump' => '/home/<remote_user>/tmp/sql-sync-test.sql',
   ),
 );
 //*/
@@ -68,7 +68,7 @@ $aliases['staging'] = array(
   'remote-user' => '',
   'path-aliases' => array(
     '%files' => 'sites/default/files',
-    '%dump' => '/tmp/sql-sync-staging.sql',
+    '%dump' => '/home/<remote_user>/tmp/sql-sync-staging.sql',
   ),
 );
 //*/
@@ -81,7 +81,7 @@ $aliases['prod'] = array(
   'remote-user' => '',
   'path-aliases' => array(
     '%files' => 'sites/default/files',
-    '%dump' => '/tmp/sql-sync-prod.sql',
+    '%dump' => '/home/<remote_user>/tmp/sql-sync-prod.sql',
   ),
 );
 //*/
