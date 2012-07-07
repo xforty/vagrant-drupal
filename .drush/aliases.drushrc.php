@@ -1,7 +1,6 @@
 <?php 
-// [GH-52]
-// $project_name='[projectname_name_from_vagrantfile]';
-$project_name='drupal';
+
+$project_name = 'drupal'; // value of :project_name from Vagrantfile
 
 $aliases['local'] = array(
   'uri' => "local.$project_name",
