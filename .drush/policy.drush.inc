@@ -53,7 +53,7 @@ function drush_policy_sql_sync_validate($source = NULL, $destination = NULL) {
   $result = true;
   $destination = _drush_policy_parse_alias($destination);
 
-  if ($destination == '@local') {
+  if ($destination == '@prod') {
     $result = _drush_policy_override_validate($destination, 'database');
   }
 
