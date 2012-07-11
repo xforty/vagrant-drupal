@@ -8,7 +8,10 @@ Vagrant::Config.run do |config|
   #################################
 
   # Set the vm's host name (displays in shell prompt)
-  config.vm.host_name = "ubuntu-10"
+  # (Hint: Consider setting this to the name of your
+  # project. The hostname "ubuntu.local" is automatically
+  # available.)
+  config.vm.host_name = "drupal"
 
   # Name of base box to be used
   config.vm.box = "ubuntu-10.04.4-server-amd64"
@@ -28,12 +31,17 @@ Vagrant::Config.run do |config|
   # Networking                    #
   #################################
 
-  # Use port-forwarding. Web site will be at http://localhost:4567
-  config.vm.forward_port(80, 4567, :auto => true)
+  # Use port-forwarding. Un-comment this line to use.
+  # Web site will be at http://localhost:4567
+  #
+  # config.vm.forward_port(80, 4567, :auto => true)
 
-  # Use host-only networking. Un-comment this line to use. Requires you to
-  # edit your /etc/hosts file to add the line: "172.21.21.21   local.drupal".
-  # Do so at your own risk. Site will then available at http://local.drupal
+  # Use host-only networking. The site is automatically 
+  # available at "config.vm.host_name".local.
+  # (ie. ubuntu-10.local)
+  config.vm.network :hostonly, :dhcp, :ip => "172.21.21.1"
+
+  # Use a host-only static IP address. Required for NFS.
   #
   # config.vm.network :hostonly, "172.21.21.21"
 
@@ -47,7 +55,7 @@ Vagrant::Config.run do |config|
   # Use vboxfs for shared folder.
   config.vm.share_folder("srv", "/srv", srv_path, :owner => "vagrant", :group => "www-data", :create => true)
 
-  # Use nfs for shared folder. Just un-comment this line and turn on
+  # Use nfs for shared folder. Just un-comment this line and turn on static
   # host-only networking. vboxfs is known to have performance issues
   # on non-windows hosts. http://vagrantup.com/docs/nfs.html
   #
@@ -92,13 +100,6 @@ Vagrant::Config.run do |config|
 
     # Specify custom JSON node attributes
     chef.json.merge!(
-      :drupal => {
-        # Used in the Apache VirtualHost. If using host-only networking and
-        # you change this attribute, /etc/hosts needs the name for the ip set
-        # to local.<project_name>. For example, if project_name is xforty.com,
-        # you would set the ip to local.xforty.com in your /etc/hosts file.
-        :project_name => "drupal",
-      },
       :mysql => {
         :server_root_password => "root"
       },

@@ -1,9 +1,9 @@
 <?php 
 
-$project_name = 'drupal'; // value of :project_name from Vagrantfile
+$project_name = 'drupal'; // value of :host_name from Vagrantfile
 
 $aliases['local'] = array(
-  'uri' => "local.$project_name",
+  'uri' => "$project_name.local",
   'root' => '/srv/www',
   'path-aliases' => array(
     '%files' => 'sites/default/files',

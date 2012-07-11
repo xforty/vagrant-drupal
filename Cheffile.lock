@@ -40,7 +40,7 @@ SITE
 GIT
   remote: git://github.com/xforty/chef-drupal.git
   ref: master
-  sha: 2a90d95cea19fc8c8649b27b0311557225d74012
+  sha: 846b23ca467b9be681527cab844200920d75f7c1
   specs:
     drupal (0.0.1)
       apache2 (>= 0.0.0)
@@ -112,7 +112,7 @@ GIT
 GIT
   remote: git://github.com/xforty/chef-xforty.git
   ref: master
-  sha: c1ccf6724512b1332e1af965db21029bf658357c
+  sha: 641ee4c050d7a5ed351559da6e00999eabb2441d
   specs:
     xforty (0.0.1)
       apt (>= 0.0.0)
