@@ -62,8 +62,9 @@ Vagrant::Config.run do |config|
     chef.log_level = :debug if ENV['vdb']
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
 
-    chef.add_recipe "squid"
+    # Default top-level chef recipes
     chef.add_recipe "xforty"
+    chef.add_recipe "squid"
     chef.add_recipe "drupal"
     chef.add_recipe "initdb"
 
