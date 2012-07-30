@@ -93,8 +93,8 @@ Vagrant::Config.run do |config|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
 
     # Default top-level chef recipes
-    chef.add_recipe "squid"
     chef.add_recipe "xforty"
+    chef.add_recipe "squid"
     chef.add_recipe "drupal"
     chef.add_recipe "initdb"
 
