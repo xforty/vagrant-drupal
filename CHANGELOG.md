@@ -4,6 +4,10 @@ vagrant-drupal changelog
 ### 0.3.0 (unreleased)
 
 
+### 0.2.1 (July 31, 2012)
+
+  * Fix error installing squid due to old package name [GH-65]
+
 ### 0.2.0 (May 28, 2012)
 
   * Performance improvements for 0.2.0 [GH-43]
