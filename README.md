@@ -16,6 +16,7 @@ section below.
 * [vagrant](http://www.vagrantup.com/) gem >= 1.0.3
 * [chef](http://wiki.opscode.com/) gem >= 0.10.8
 * [librarian](https://github.com/applicationsonline/librarian) gem >= 0.0.23
+* [ubuntu base box](https://github.com/xforty/vagrant-drupal/wiki/Base-Boxes) >= 10.04 (default base box already defined)
 
 ### Basic Usage
 
