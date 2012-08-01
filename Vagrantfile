@@ -85,8 +85,8 @@ Vagrant::Config.run do |config|
   # Provision a new vm using chef-solo
   config.vm.provision :chef_solo do |chef|
 
-    # To turn on chef debug output, run "vdb=1 vagrant up" from command line
-    chef.log_level = :debug if ENV['vdb']
+    # To turn on chef debug output, run "CHEF_LOG=1 vagrant up" from command line
+    chef.log_level = :debug if !(ENV['CHEF_LOG']).nil?
 
     # The librarian gem controls the "cookbook" folder, do not touch it. If you
     # need to create site-specific cookbooks, place them in "site-cookbooks".
