@@ -36,12 +36,12 @@ section below.
    to the drupal site with the credentials specified in the site-install
    output.
 
-### Vagrant
+### Vagrantfile
 
 It is common to modify the Vagrantfile to meet project needs. We encourage
 you to read through the comments in the Vagrantfile as well as the official
-[Vagrant documentation](http://www.vagrantup.com/docs/vagrantfile.html)
-for other possible configurations.
+[documentation](http://vagrantup.com/v1/docs/vagrantfile.html) for other
+possible configurations.
 
 ### Resources
 
