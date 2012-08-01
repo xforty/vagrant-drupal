@@ -10,13 +10,13 @@ section below.
 ### Requirements
 
 * [Not Windows](https://github.com/xforty/vagrant-drupal/wiki/Windows)
-* [vagrant-drupal](https://github.com/xforty/vagrant-drupal)
+* [Vagrant-drupal](https://github.com/xforty/vagrant-drupal)
 * [Ruby](http://www.ruby-lang.org/) >= 1.9.2 (on both host and base box)
 * [VirtualBox](http://www.virtualbox.org/) >= 4.1.0
-* [vagrant](http://www.vagrantup.com/) gem >= 1.0.3
-* [chef](http://wiki.opscode.com/) gem >= 0.10.8
-* [librarian](https://github.com/applicationsonline/librarian) gem >= 0.0.23
-* [ubuntu base box](https://github.com/xforty/vagrant-drupal/wiki/Base-Boxes) >= 10.04 (default base box already defined)
+* [Vagrant gem](http://www.vagrantup.com/) >= 1.0.3
+* [Chef gem](http://wiki.opscode.com/) >= 0.10.8
+* [Librarian gem](https://github.com/applicationsonline/librarian) >= 0.0.23
+* [Ubuntu base box](https://github.com/xforty/vagrant-drupal/wiki/Base-Boxes) >= 10.04 (default base box already defined)
 
 ### Basic Usage
 
