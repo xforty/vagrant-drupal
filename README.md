@@ -2,11 +2,9 @@ vagrant-drupal
 ==============
 version 0.3.x - [changelog](https://github.com/xforty/vagrant-drupal/blob/master/CHANGELOG.md)
 
-Builds a Drupal environment and site on top of a Vagrant vm. This repo
-can be used as is to get a Drupal site up and running quickly or as a
-template for your own Drupal projects. If you want to read more about
-the project or have questions, see the
-[resources](https://github.com/xforty/vagrant-drupal#resources)
+A project template for building reproducible and portable local Drupal
+development environments. If you want to learn more about the project,
+see the [resources](https://github.com/xforty/vagrant-drupal#resources)
 section below.
 
 ### Requirements
