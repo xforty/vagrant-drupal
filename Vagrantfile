@@ -7,10 +7,7 @@ Vagrant::Config.run do |config|
   # Base box and vm configuration #
   #################################
 
-  # Set the vm's host name (displays in shell prompt)
-  # (Hint: Consider setting this to the name of your
-  # project. The hostname "ubuntu.local" is automatically
-  # available.)
+  # Set the vm's host name. Consider setting this to the name of your project.
   config.vm.host_name = "drupal"
 
   # Name of base box to be used
@@ -31,17 +28,11 @@ Vagrant::Config.run do |config|
   # Networking                    #
   #################################
 
-  # Use port-forwarding. Un-comment this line to use.
-  # Web site will be at http://localhost:4567
-  #
-  # config.vm.forward_port(80, 4567, :auto => true)
+  # Use port-forwarding. Web site will be at http://localhost:4567
+  config.vm.forward_port(80, 4567, :auto => true)
 
-  # Use host-only networking. The site is automatically 
-  # available at "config.vm.host_name".local.
-  # (ie. ubuntu-10.local)
-  config.vm.network :hostonly, :dhcp, :ip => "172.21.21.1"
-
-  # Use a host-only static IP address. Required for NFS.
+  # Use host-only networking. Required for nfs shared folder.
+  # Web site will be at http://<config.vm.host_name>.local
   #
   # config.vm.network :hostonly, "172.21.21.21"
 
