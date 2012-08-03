@@ -1,47 +1,54 @@
-; ----------------
-; Generated makefile from http://drushmake.me
-; Permanent URL: http://drushmake.me/file.php?token=aeada7df0a01&raw
-; TODO: Generalize
-; ----------------
-  
-; Core version
-; ------------
-; Each makefile should begin by declaring the core version of Drupal that all
-; projects should be compatible with.
-  
-core = 7.x
-  
-; API version
-; ------------
-; Every makefile needs to declare its Drush Make API version. This version of
-; drush make uses API version `2`.
-  
-api = 2
-  
-; Core project
-; ------------
-; In order for your makefile to generate a full Drupal site, you must include
-; a core project. This is usually Drupal core, but you can also specify
-; alternative core projects like Pressflow. Note that makefiles included with
-; install profiles *should not* include a core project.
-  
-; Drupal 7.x. Requires the `core` property to be set to 7.x.
-projects[drupal][version] = 7
+;;
+;; Stub makefile to building xforty-drupal
+;;
 
-  
-  
-; Modules
-; --------
-projects[admin_menu][subdir] = contrib
-projects[ctools][subdir] = contrib
-projects[devel][subdir] = contrib
-projects[views_bulk_operations][subdir] = contrib
-projects[views][subdir] = contrib
-projects[features][subdir] = contrib
-projects[diff][subdir] = contrib
-  
+;----------------------------------------
+; base make file
+;----------------------------------------
 
-; Themes
-; --------
-projects[] = rubik
-projects[] = tao
+; If you want to use the latest HEAD from 7.x branch
+;includes[] = http://github.com/xforty/xforty-drupal/raw/7.x/xforty-com.make
+
+; If you want to use a specific tag instead (recommended)
+includes[] = http://github.com/xforty/xforty-drupal/raw/7.x-1.0.0/xforty-com.make
+
+;----------------------------------------
+; features
+;----------------------------------------
+
+
+
+;----------------------------------------
+; libraries
+;----------------------------------------
+
+
+
+;----------------------------------------
+; modules
+;----------------------------------------
+
+
+
+;----------------------------------------
+; profiles
+;----------------------------------------
+
+; Default behavior is to download the HEAD of the 7.x branch.
+; When creating your own site's distro.make, comment out the
+; download branch line and un-comment out the download tag line.
+projects[xforty][type] = profile
+projects[xforty][download][type] = git
+projects[xforty][download][url] = git://github.com/xforty/xforty-drupal.git
+;projects[xforty][download][branch] = 7.x
+projects[xforty][download][tag] = 7.x-1.0.0
+
+;----------------------------------------
+; themes
+;----------------------------------------
+
+
+
+;----------------------------------------
+; Include base make file overrides below
+;----------------------------------------

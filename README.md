@@ -1,23 +1,22 @@
 vagrant-drupal
 ==============
-version 0.2.1 - [changelog](https://github.com/xforty/vagrant-drupal/blob/master/CHANGELOG.md)
+version 0.3.0 - [changelog](https://github.com/xforty/vagrant-drupal/blob/master/CHANGELOG.md)
 
-Builds a Drupal environment and site on top of a Vagrant vm. This repo
-can be used as is to get a Drupal site up and running quickly or as a
-template for your own Drupal projects. If you want to read more about
-the project or have questions, see the
-[resources](https://github.com/xforty/vagrant-drupal#resources)
+A project template for building reproducible and portable local Drupal
+development environments. If you want to learn more about the project,
+see the [resources](https://github.com/xforty/vagrant-drupal#resources)
 section below.
 
 ### Requirements
 
 * [Not Windows](https://github.com/xforty/vagrant-drupal/wiki/Windows)
-* [vagrant-drupal](https://github.com/xforty/vagrant-drupal)
+* [Vagrant-drupal](https://github.com/xforty/vagrant-drupal)
 * [Ruby](http://www.ruby-lang.org/) >= 1.9.2 (on both host and base box)
 * [VirtualBox](http://www.virtualbox.org/) >= 4.1.0
-* [vagrant](http://www.vagrantup.com/) gem >= 1.0.3
-* [chef](http://wiki.opscode.com/) gem >= 0.10.8
-* [librarian](https://github.com/applicationsonline/librarian) gem >= 0.0.23
+* [Vagrant gem](http://www.vagrantup.com/) >= 1.0.3
+* [Chef gem](http://wiki.opscode.com/) >= 0.10.8
+* [Librarian gem](https://github.com/applicationsonline/librarian) >= 0.0.23
+* [Ubuntu base box](https://github.com/xforty/vagrant-drupal/wiki/Base-Boxes) >= 10.04 (default base box already defined)
 
 ### Basic Usage
 
@@ -25,7 +24,6 @@ section below.
 
         host$ git clone git://github.com/xforty/vagrant-drupal.git
         host$ cd vagrant-drupal
-        host$ librarian-chef install
         host$ vagrant up
         host$ vagrant ssh
 
@@ -39,12 +37,12 @@ section below.
    to the drupal site with the credentials specified in the site-install
    output.
 
-### Vagrant
+### Vagrantfile
 
 It is common to modify the Vagrantfile to meet project needs. We encourage
 you to read through the comments in the Vagrantfile as well as the official
-[Vagrant documentation](http://www.vagrantup.com/docs/vagrantfile.html)
-for other possible configurations.
+[documentation](http://vagrantup.com/v1/docs/vagrantfile.html) for other
+possible configurations.
 
 ### Resources
 
