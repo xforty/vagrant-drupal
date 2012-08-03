@@ -1,6 +1,10 @@
 vagrant-drupal changelog
 ========================
 
+### 0.4.0 ([unreleased](https://github.com/xforty/vagrant-drupal/issues?milestone=4&state=open))
+
+
+
 ### 0.3.0 (August 3, 2012)
 
   * Standardized chef debug flag name [GH-66]
