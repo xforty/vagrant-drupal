@@ -1,8 +1,31 @@
 vagrant-drupal changelog
 ========================
 
-### 0.3.0 (unreleased)
+### 0.3.0 (August 3, 2012)
 
+  * Standardized chef debug flag name [GH-66]
+
+  * Edited project overview in readme to better reflect purpose [GH-63]
+
+  * Updated policy.drush.inc to work with path-aliases [GH-60]
+
+  * `librarian-chef install` is only called during `vagrant up` [GH-58]
+
+  * Added avahi (zeroconf) for automatic dns [GH-59]
+
+  * Host name of vm set [GH-54]
+
+  * Resolved collisions with sql dump filenames [GH-52]
+
+  * Tuned down apache prefork options [GH-46]
+
+  * Added ability to override @prod security policy [GH-45]
+
+  * example.make uses xforty-drupal for base make file [GH-40]
+
+  * `librarian-chef install` is called automatically [GH-28]
+
+  * HTTP request status now works with host-only networking [GH-10]
 
 ### 0.2.1 (July 31, 2012)
 
