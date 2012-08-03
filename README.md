@@ -39,10 +39,11 @@ section below.
 
 ### Vagrantfile
 
-It is common to modify the Vagrantfile to meet project needs. We encourage
-you to read through the comments in the Vagrantfile as well as the official
-[documentation](http://vagrantup.com/v1/docs/vagrantfile.html) for other
-possible configurations.
+It is common to modify the Vagrantfile to meet project needs.
+We encourage you to read through the comments in the
+[Vagrantfile](https://github.com/xforty/vagrant-drupal/blob/master/Vagrantfile)
+as well as the [official documentation](http://vagrantup.com/v1/docs/vagrantfile.html)
+for other possible configurations.
 
 ### Resources
 
