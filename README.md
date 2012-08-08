@@ -15,7 +15,7 @@ section below.
 * [VirtualBox](http://www.virtualbox.org/) >= 4.1.0
 * [Vagrant gem](http://www.vagrantup.com/) >= 1.0.3
 * [Chef gem](http://wiki.opscode.com/) >= 0.10.8
-* [Librarian gem](https://github.com/applicationsonline/librarian) >= 0.0.23
+* [Librarian gem](https://github.com/applicationsonline/librarian) >= 0.0.24
 * [Ubuntu base box](https://github.com/xforty/vagrant-drupal/wiki/Base-Boxes) >= 10.04 (default base box already defined)
 
 ### Basic Usage
