@@ -5,12 +5,14 @@ site 'http://community.opscode.com/api/v1'
 
 cookbook 'drupal',
   :git => 'git://github.com/xforty/chef-drupal.git',
-  :ref => '1.0.0'
+  :ref => '1.1.0'
 
-# Load HEAD of master branch until development calms down
+# Load from xforty's develop branch until msonnabaum pulls...
+# https://github.com/msonnabaum/chef-drush/pull/10
+# https://github.com/msonnabaum/chef-drush/pull/14
 cookbook 'drush',
   :git => 'git://github.com/xforty/chef-drush.git',
-  :ref => 'master'
+  :ref => 'develop'
 
 cookbook 'initdb',
   :git => 'git://github.com/xforty/chef-initdb.git',
@@ -40,4 +42,4 @@ cookbook 'squid',
 
 cookbook 'xforty',
   :git => 'git://github.com/xforty/chef-xforty.git',
-  :ref => '1.0.0'
+  :ref => '1.1.0'
