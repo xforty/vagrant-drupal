@@ -7,9 +7,8 @@ cookbook 'drupal',
   :git => 'git://github.com/xforty/chef-drupal.git',
   :ref => '1.1.0'
 
-# Load from xforty's develop branch until msonnabaum pulls...
-# https://github.com/msonnabaum/chef-drush/pull/10
-# https://github.com/msonnabaum/chef-drush/pull/14
+# Load from xforty's develop branch until msonnabaum's stabalizes
+# https://github.com/msonnabaum/chef-drush
 cookbook 'drush',
   :git => 'git://github.com/xforty/chef-drush.git',
   :ref => 'develop'
