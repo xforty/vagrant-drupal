@@ -1,6 +1,10 @@
 vagrant-drupal changelog
 ========================
 
+### 0.5.x ([unreleased](https://github.com/xforty/vagrant-drupal/issues?milestone=5&state=open))
+
+
+
 ### 0.4.0 (August 14, 2012)
 
   * Use upstream drush cookbook [GH-70]
