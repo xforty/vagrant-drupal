@@ -91,27 +91,27 @@ Vagrant::Config.run do |config|
 
     # Specify custom JSON node attributes
     chef.json.merge!(
-      :mysql => {
-        :server_root_password => "root"
+      'mysql' => {
+        'server_root_password' => 'root'
       },
-      :initdb => {
-        :mysql => {
-          :connection => {
-            :username => "root",
-            :password => "root",
-            :host     => "localhost"
+      'initdb' => {
+        'mysql' => {
+          'connection' => {
+            'username' => 'root',
+            'password' => 'root',
+            'host'     => 'localhost'
           },
-          :databases => {
-            "drupal" => {
-              :action => :create
+          'databases' => {
+            'drupal' => {
+              'action' => 'create'
             }
           },
-          :users => {
-            "username" => {
-              :action        => :grant,
-              :database_name => "drupal",
-              :host          => "localhost",
-              :password      => "password"
+          'users' => {
+            'username' => {
+              'action'        => 'grant',
+              'database_name' => 'drupal',
+              'host'          => 'localhost',
+              'password'      => 'password'
             }
           }
         }

@@ -39,35 +39,33 @@ SITE
 
 GIT
   remote: git://github.com/xforty/chef-drupal.git
-  ref: master
-  sha: 846b23ca467b9be681527cab844200920d75f7c1
+  ref: 1.1.0
+  sha: 98e27ad698bb27888dea599e062cbce30467bd22
   specs:
-    drupal (0.0.1)
+    drupal (1.1.0)
       apache2 (>= 0.0.0)
-      drush (>= 0.0.0)
       imagemagick (>= 0.0.0)
       iptables (>= 0.0.0)
       mysql (>= 0.0.0)
       php (>= 0.0.0)
       php_module (>= 0.0.0)
       php_pear (>= 0.0.0)
+      xforty (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-drush.git
-  ref: master
-  sha: d2585dd2e4b9088053dfc61a07df320cf30c5cb1
+  ref: develop
+  sha: 02c625619c98f517e61f84970fb26a30cff5682e
   specs:
-    drush (0.9.2)
-      git (>= 0.0.0)
+    drush (0.10.0)
       php (>= 0.0.0)
-      subversion (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-initdb.git
-  ref: master
-  sha: 7cf0289a5a78ef3fc36d3cebebd68b1c27254480
+  ref: 1.0.0
+  sha: 96914c08904fc345279864ad087c21f00108bce1
   specs:
-    initdb (0.0.1)
+    initdb (1.0.0)
       database (>= 0.0.0)
 
 GIT
@@ -81,43 +79,46 @@ GIT
 
 GIT
   remote: git://github.com/xforty/chef-php_module.git
-  ref: master
-  sha: 5836d3292ebc58b37026282ade0336aed8ba178a
+  ref: 1.0.0
+  sha: f96bd2835a5ac21a933f5ea05a6716a9f79cc68d
   specs:
-    php_module (0.0.1)
+    php_module (1.0.0)
       php (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-php_pear.git
-  ref: master
-  sha: fd509ef389f4a4f390189c8de8a04e63ac7f6c7d
+  ref: 1.0.0
+  sha: f7c1e8b85bf761f7e15442651ac35c440c6c0ad5
   specs:
-    php_pear (0.0.1)
+    php_pear (1.0.0)
       php (>= 0.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-rpmforge.git
-  ref: 0.1.0
-  sha: 11824dd7c0ba1ece39bfd93c6d694cff007e17e6
+  ref: 1.0.0
+  sha: c5f19c432af80e74242cbd4792597db0f2d40abc
   specs:
-    rpmforge (0.1.0)
+    rpmforge (1.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-squid.git
-  ref: master
-  sha: 446a441ae9d060a0e2403bdbaf8b220f9f5337be
+  ref: 1.0.0
+  sha: ecbfa1c7d6bf8e8569999aa77d9ac129d5dc993d
   specs:
-    squid (0.0.1)
+    squid (1.0.0)
 
 GIT
   remote: git://github.com/xforty/chef-xforty.git
-  ref: master
-  sha: 641ee4c050d7a5ed351559da6e00999eabb2441d
+  ref: 1.1.0
+  sha: 2492385b57ab4fa2d2d45f3e2f0a966f6838ba20
   specs:
-    xforty (0.0.1)
+    xforty (1.1.0)
       apt (>= 0.0.0)
+      drush (>= 0.0.0)
+      git (>= 0.0.0)
       rpmforge (>= 0.0.0)
       selinux (>= 0.0.0)
+      subversion (>= 0.0.0)
       vim (>= 0.0.0)
 
 DEPENDENCIES

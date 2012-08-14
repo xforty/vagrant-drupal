@@ -1,6 +1,6 @@
 vagrant-drupal
 ==============
-version 0.3.0 - [changelog](https://github.com/xforty/vagrant-drupal/blob/master/CHANGELOG.md)
+version 0.4.0 - [changelog](https://github.com/xforty/vagrant-drupal/blob/master/CHANGELOG.md)
 
 A project template for building reproducible and portable local Drupal
 development environments. If you want to learn more about the project,
@@ -15,7 +15,7 @@ section below.
 * [VirtualBox](http://www.virtualbox.org/) >= 4.1.0
 * [Vagrant gem](http://www.vagrantup.com/) >= 1.0.3
 * [Chef gem](http://wiki.opscode.com/) >= 0.10.8
-* [Librarian gem](https://github.com/applicationsonline/librarian) >= 0.0.23
+* [Librarian gem](https://github.com/applicationsonline/librarian) >= 0.0.24
 * [Ubuntu base box](https://github.com/xforty/vagrant-drupal/wiki/Base-Boxes) >= 10.04 (default base box already defined)
 
 ### Basic Usage
@@ -39,10 +39,11 @@ section below.
 
 ### Vagrantfile
 
-It is common to modify the Vagrantfile to meet project needs. We encourage
-you to read through the comments in the Vagrantfile as well as the official
-[documentation](http://vagrantup.com/v1/docs/vagrantfile.html) for other
-possible configurations.
+It is common to modify the Vagrantfile to meet project needs.
+We encourage you to read through the comments in the
+[Vagrantfile](https://github.com/xforty/vagrant-drupal/blob/master/Vagrantfile)
+as well as the [official documentation](http://vagrantup.com/v1/docs/vagrantfile.html)
+for other possible configurations.
 
 ### Resources
 
