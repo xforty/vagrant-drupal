@@ -1,9 +1,15 @@
 vagrant-drupal changelog
 ========================
 
-### 0.4.0 ([unreleased](https://github.com/xforty/vagrant-drupal/issues?milestone=4&state=open))
+### 0.4.0 (August 14, 2012)
 
+  * Use upstream drush cookbook [GH-70]
 
+  * Bump required librarian gem version to 0.24 [GH-69]
+
+  * Pin cookbook versions [GH-68]
+
+  * Change attributes from symbols to strings [GH-61]
 
 ### 0.3.0 (August 3, 2012)
 
