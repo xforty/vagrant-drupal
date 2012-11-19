@@ -1,6 +1,10 @@
 vagrant-drupal changelog
 ========================
 
+### 0.4.1 (November 19, 2012)
+
+  * Use initdb cookbook version 1.0.1
+
 ### 0.4.0 (August 14, 2012)
 
   * Use upstream drush cookbook [GH-70]
