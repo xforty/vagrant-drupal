@@ -1,6 +1,6 @@
 vagrant-drupal
 ==============
-version 0.4.1 - [changelog](https://github.com/xforty/vagrant-drupal/blob/master/CHANGELOG.md)
+version 0.5.x - [changelog](https://github.com/xforty/vagrant-drupal/blob/master/CHANGELOG.md)
 
 A project template for building reproducible and portable local Drupal
 development environments. If you want to learn more about the project,
