@@ -15,7 +15,7 @@ cookbook 'drush',
 
 cookbook 'initdb',
   :git => 'git://github.com/xforty/chef-initdb.git',
-  :ref => '1.0.0'
+  :ref => '1.0.1'
 
 # Load from xforty repo until known issue is fixed
 # http://tickets.opscode.com/browse/COOK-932

@@ -6,7 +6,7 @@ SITE
     aws (0.100.0)
     build-essential (1.1.0)
     chef_handler (1.0.6)
-    database (1.2.0)
+    database (1.3.2)
       aws (>= 0.0.0)
       mysql (>= 1.2.0)
       postgresql (>= 0.0.0)
@@ -62,11 +62,11 @@ GIT
 
 GIT
   remote: git://github.com/xforty/chef-initdb.git
-  ref: 1.0.0
-  sha: 96914c08904fc345279864ad087c21f00108bce1
+  ref: 1.0.1
+  sha: d6c22359da1cd6e74f420d0f832357d1b84196aa
   specs:
-    initdb (1.0.0)
-      database (>= 0.0.0)
+    initdb (1.0.1)
+      database (= 1.3.2)
 
 GIT
   remote: git://github.com/xforty/chef-mysql.git
