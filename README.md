@@ -31,6 +31,8 @@ section below.
 
         vm$ drush make --prepare-install /vagrant/example.make /srv/www
         vm$ cd /srv/www
+		vm$ drush pm-update project drupal-7.17
+		vm$ drush updatedb
         vm$ drush site-install --db-url=mysql://username:password@localhost/drupal
 
 3. Go to [http://localhost:4567](http://localhost:4567) and log in
