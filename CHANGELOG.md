@@ -1,7 +1,9 @@
 vagrant-drupal changelog
 ========================
 
-### 0.5.x ([unreleased](https://github.com/xforty/vagrant-drupal/issues?milestone=5&state=open))
+### 0.4.2 (January 9, 2013)
+
+  * Update reference to xforty-drupal xforty.make
 
 ### 0.4.1 (November 19, 2012)
 
