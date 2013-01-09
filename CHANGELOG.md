@@ -1,6 +1,10 @@
 vagrant-drupal changelog
 ========================
 
+### 0.4.2 (January 9, 2013)
+
+  * Update reference to xforty-drupal xforty.make
+
 ### 0.4.1 (November 19, 2012)
 
   * Use initdb cookbook version 1.0.1

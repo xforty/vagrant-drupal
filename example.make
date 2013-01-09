@@ -7,10 +7,10 @@
 ;----------------------------------------
 
 ; If you want to use the latest HEAD from 7.x branch
-;includes[] = http://github.com/xforty/xforty-drupal/raw/7.x/xforty-com.make
+;includes[] = http://github.com/xforty/xforty-drupal/raw/7.x/xforty.make
 
 ; If you want to use a specific tag instead (recommended)
-includes[] = http://github.com/xforty/xforty-drupal/raw/7.x-1.0.0/xforty-com.make
+includes[] = http://github.com/xforty/xforty-drupal/raw/7.x-1.1.0/xforty.make
 
 ;----------------------------------------
 ; features
@@ -41,7 +41,7 @@ projects[xforty][type] = profile
 projects[xforty][download][type] = git
 projects[xforty][download][url] = git://github.com/xforty/xforty-drupal.git
 ;projects[xforty][download][branch] = 7.x
-projects[xforty][download][tag] = 7.x-1.0.0
+projects[xforty][download][tag] = 7.x-1.1.0
 
 ;----------------------------------------
 ; themes
