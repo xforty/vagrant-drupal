@@ -1,54 +1,55 @@
 ;;
-;; Stub makefile to building xforty-drupal
+;; Stub make file for building xforty-drupal. Copy this file and add
+;; site-specific components for your project.
 ;;
 
 ;----------------------------------------
 ; base make file
 ;----------------------------------------
 
-; If you want to use the latest HEAD from 7.x branch
-;includes[] = http://github.com/xforty/xforty-drupal/raw/7.x/xforty.make
-
-; If you want to use a specific tag instead (recommended)
-includes[] = http://github.com/xforty/xforty-drupal/raw/7.x-1.1.0/xforty.make
+includes[] = http://github.com/xforty/xforty-drupal/raw/7.x-2.0.0/base.make
 
 ;----------------------------------------
-; features
+; base make file overrides
 ;----------------------------------------
 
 
 
 ;----------------------------------------
-; libraries
+; distro features
 ;----------------------------------------
 
 
 
 ;----------------------------------------
-; modules
+; distro libraries
 ;----------------------------------------
 
 
 
 ;----------------------------------------
-; profiles
+; distro modules
 ;----------------------------------------
 
-; Default behavior is to download the HEAD of the 7.x branch.
-; When creating your own site's distro.make, comment out the
-; download branch line and un-comment out the download tag line.
+
+
+;----------------------------------------
+; distro profiles
+;----------------------------------------
+
 projects[xforty][type] = profile
 projects[xforty][download][type] = git
 projects[xforty][download][url] = git://github.com/xforty/xforty-drupal.git
-;projects[xforty][download][branch] = 7.x
-projects[xforty][download][tag] = 7.x-1.1.0
+projects[xforty][download][tag] = 7.x-2.0.0
+
+; <PROJECT_PROFILE_GOES_HERE>
 
 ;----------------------------------------
-; themes
+; distro themes
 ;----------------------------------------
 
 
 
 ;----------------------------------------
-; Include base make file overrides below
+; distro make file overrides
 ;----------------------------------------

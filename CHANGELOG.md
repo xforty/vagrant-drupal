@@ -1,6 +1,12 @@
 vagrant-drupal changelog
 ========================
 
+### 0.4.3 (January 10, 2013)
+
+  * Update example.make to match xforty-drupal's distro.make.example
+
+  * Use xforty-drupal 7.x-2.0.0
+
 ### 0.4.2 (January 9, 2013)
 
   * Update reference to xforty-drupal xforty.make
