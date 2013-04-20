@@ -65,7 +65,7 @@ Vagrant::Config.run do |config|
     # Run librarian if cookbooks folder does not exist or is empty
     if !Dir::exists?(cookbooks_path) || (Dir.entries(cookbooks_path).size < 3)
       puts 'Running "librarian-chef install"...'
-      puts `librarian-chef install`
+      puts 'librarian-chef install'
     end
   end
 
